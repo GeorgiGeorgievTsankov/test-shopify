@@ -44,7 +44,10 @@
       "next": "Next page",
       "previous": "Previous page"
     },
-    "search": { "search": "Search", "reset": "Clear search term" },
+    "search": {
+      "search": "Search",
+      "reset": "Clear search term"
+    },
     "cart": {
       "view": "View cart ({{ count }})",
       "view_empty_cart": "View cart",
@@ -160,7 +163,9 @@
         "sale_price": "Sale price",
         "unit_price": "Unit price"
       },
-      "selling_plans": { "one_time_purchase": "One-time Purchase" },
+      "selling_plans": {
+        "one_time_purchase": "One-time Purchase"
+      },
       "share": "Share this product",
       "sold_out": "Sold out",
       "unavailable": "Unavailable",
@@ -174,7 +179,9 @@
       "include_taxes": "Tax included.",
       "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
     },
-    "modal": { "label": "Media gallery" },
+    "modal": {
+      "label": "Media gallery"
+    },
     "facets": {
       "apply": "Apply",
       "clear": "Clear",
@@ -236,7 +243,9 @@
       "suggestions": "Suggestions",
       "pages": "Pages"
     },
-    "cart": { "cart": "Cart" },
+    "cart": {
+      "cart": "Cart"
+    },
     "contact": {
       "form": {
         "title": "Contact form",
@@ -249,13 +258,19 @@
         "error_heading": "Please adjust the following:"
       }
     },
-    "404": { "title": "Page not found", "subtext": "404" }
+    "404": {
+      "title": "Page not found",
+      "subtext": "404"
+    }
   },
   "sections": {
     "header": {
       "announcement": "Announcement",
       "menu": "Menu",
-      "cart_count": { "one": "{{ count }} item", "other": "{{ count }} items" }
+      "cart_count": {
+        "one": "{{ count }} item",
+        "other": "{{ count }} items"
+      }
     },
     "cart": {
       "title": "Your cart",
@@ -285,7 +300,9 @@
         "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
       }
     },
-    "footer": { "payment": "Payment methods" },
+    "footer": {
+      "payment": "Payment methods"
+    },
     "featured_blog": {
       "view_all": "View all",
       "onboarding_title": "Blog post",
@@ -295,13 +312,17 @@
       "view_all": "View all",
       "view_all_label": "View all products in the {{ collection_name }} collection"
     },
-    "collection_list": { "view_all": "View all" },
+    "collection_list": {
+      "view_all": "View all"
+    },
     "collection_template": {
       "empty": "No products found",
       "title": "Collection",
       "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
     },
-    "video": { "load_video": "Load video: {{ description }}" },
+    "video": {
+      "load_video": "Load video: {{ description }}"
+    },
     "slideshow": {
       "load_slide": "Load slide",
       "previous_slideshow": "Previous slide",
@@ -311,7 +332,9 @@
       "carousel": "Carousel",
       "slide": "Slide"
     },
-    "page": { "title": "Page title" }
+    "page": {
+      "title": "Page title"
+    }
   },
   "localization": {
     "country_label": "Country/region",
