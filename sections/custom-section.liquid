@@ -1,9 +1,6 @@
 <div class="custom-section color-{{ section.settings.color_scheme }}{% if section.settings.full_width %} page-width{% endif %}">
-    <h1> class="text-{{ block.settings.alignment }}"
-        {% if block.settings.text %}
-        {% else %}Default Text
-        {% endif %}
-    </h1>
+    <h1> {{ section.settings.title }}</h1>
+    <p> {{ section.settings.description }}</p>
     {% content_for 'blocks' %}
 </div>
 
@@ -33,13 +30,25 @@
         }
       ],
       "default": "background-1",
-      "label": "Color scheme"
+      "label": "Color scheme",
     },
     {
       "type": "checkbox",
       "id": "full_width",
       "default": true,
       "label": "Full width"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Custom Section Title"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Custom section description</p>"
     }
   ],
   "blocks": [
