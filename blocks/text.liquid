@@ -1,0 +1,52 @@
+{% stylesheet %}
+    .text-block {
+        padding: 20px;
+        margin: 0 auto;
+        max-width: 800px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: green;
+    }
+  .text-left {
+    text-align: left;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+{% endstylesheet %}
+
+<div class="text-block text-{{ block.settings.alignment }}">
+  {{ block.settings.text }}
+</div>
+
+{% schema %}
+{
+  "name": "Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text_alignment",
+      "id": "alignment",
+      "label": "Alignment",
+    },
+  ],
+  "presets": [
+    { "name": "Text" },
+    {
+      "name": "Content",
+      "settings": {
+        "text": "<p>Hello, Georgi!</p>"
+      }
+    }
+  ]
+}
+{% endschema %}

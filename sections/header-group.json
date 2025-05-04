@@ -25,16 +25,12 @@
           }
         }
       },
-      "block_order": [
-        "announcement-bar-0"
-      ],
+      "block_order": ["announcement-bar-0"],
       "settings": {}
     },
     "header": {
       "type": "header",
-      "custom_css": [
-        ".header__heading-link .h2 {font-size: 16px;}"
-      ],
+      "custom_css": [".header__heading-link .h2 {font-size: 16px;}"],
       "settings": {
         "logo_position": "middle-center",
         "menu": "main-menu",
@@ -51,8 +47,5 @@
       }
     }
   },
-  "order": [
-    "announcement-bar",
-    "header"
-  ]
+  "order": ["announcement-bar", "header"]
 }
