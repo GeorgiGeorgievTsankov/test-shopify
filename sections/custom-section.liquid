@@ -1,17 +1,51 @@
-<div class="custom-section color-{{ section.settings.color_scheme }}">
+<div class="custom-section color-{{ section.settings.color_scheme }}{% if section.settings.full_width %} page-width{% endif %}">
     {% content_for 'blocks' %}
-  </div>
-  
-  {% schema %}
-  {
-    "name": "Custom section",
-    "blocks": [{ "type": "@theme" }, { "type": "@app" }],
-    "presets": [
-      {
-        "name": "Custom section"
-      },
-  
-    ]
-  }
-  {% endschema %}
+</div>
+
+{% schema %}
+{
+  "name": "Custom section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "Background 1"
+        },
+        {
+          "value": "background-2",
+          "label": "Background 2"
+        },
+        {
+          "value": "accent-1",
+          "label": "Accent 1"
+        },
+        {
+          "value": "accent-2",
+          "label": "Accent 2"
+        }
+      ],
+      "default": "background-1",
+      "label": "Color scheme"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "Full width"
+    }
+  ],
+  "blocks": [
+    { "type": "@theme" },
+    { "type": "@app" }
+  ],
+  "presets": [
+    {
+      "name": "Custom section"
+    }
+  ]
+}
+{% endschema %}
   
