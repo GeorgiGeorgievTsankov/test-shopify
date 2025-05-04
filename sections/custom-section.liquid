@@ -1,4 +1,9 @@
 <div class="custom-section color-{{ section.settings.color_scheme }}{% if section.settings.full_width %} page-width{% endif %}">
+    <h1> class="text-{{ block.settings.alignment }}"
+        {% if block.settings.text %}
+        {% else %}Default Text
+        {% endif %}
+    </h1>
     {% content_for 'blocks' %}
 </div>
 
