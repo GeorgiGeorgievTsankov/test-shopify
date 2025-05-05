@@ -162,40 +162,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "custom_reviews_BeD8WH": {
-      "type": "custom-reviews",
-      "blocks": {
-        "review_MqMRb3": {
-          "type": "review",
-          "settings": {
-            "stars": "5",
-            "text": "+480 mothers are already using it"
-          }
-        }
-      },
-      "block_order": [
-        "review_MqMRb3"
-      ],
-      "name": "Custom Reviews Section",
-      "settings": {
-        "background_overlay_opacity": 70,
-        "show_bottom_ornament": true,
-        "heading": "Helping you start solids stress free",
-        "text": "We simplify Starting Solids, helping you prepare nutritious meals and raise happy, healthy eaters—drama-free!",
-        "text_color": "#FFFFFF",
-        "primary_button_text": "Browse library",
-        "primary_button_link": "",
-        "secondary_button_text": "Shop products",
-        "secondary_button_link": ""
-      }
     }
   },
   "order": [
     "6a3bb789-ce10-45f5-ae67-e2063ef8c76b",
     "featured_collection",
     "f1552b18-6017-4231-810d-74e61da22c37",
-    "38cdf60f-e431-43b5-aac3-7e6215447d67",
-    "custom_reviews_BeD8WH"
+    "38cdf60f-e431-43b5-aac3-7e6215447d67"
   ]
 }
