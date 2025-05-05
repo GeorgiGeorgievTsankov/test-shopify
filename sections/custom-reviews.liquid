@@ -71,7 +71,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
         color: white;
         border: 1px solid #000000;
@@ -89,18 +89,6 @@
         justify-content: center;
       }
 
-
-    {% comment %} review-block-start {% endcomment %}
-      
-      .rating-stars-wrapper {
-        width: auto;
-        height: 34px;
-        display: flex;
-        gap: 1px;
-        border-radius: 100px;
-        padding: 8px 14px;
-        background-color: #FBE6E7;
-      }
       
       .star {
         width: 18px;
@@ -117,13 +105,60 @@
         color: {{ section.settings.text_color }};
       }
 
+      .text-box {
+        width: 830px;
+        height: 263px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
       
-      
-      
-  </style>
+
+    
+     .heading-box {
+          width: 778px;
+          height: 154px;
+          font-family: 'Agrandir', sans-serif;
+          font-weight: 800;
+          font-size: 64px;
+          line-height: 120%;
+          letter-spacing: 0;
+          text-align: center;
+          color: #FFFFFF;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
   
+        .paragraph-box{
+            width: 830;
+            height: 22;
+            font-family: Agrandir;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: center;
+            vertical-align: middle;
+            color: #FFFFFF;
+
+        }
 
 
+        .buttons-box {
+            width: 830px;
+            height: 79px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+          }
+
+
+    </style>
 
 
   <section class="section-custom-reviews-section">
@@ -154,8 +189,22 @@
               <div >star</div>
               <div>text</div>
           </div>
-        <h1>{{ section.settings.heading }}</h1>
-        <p>{{ section.settings.text }}</p>
+        
+          <div class="text-box">
+            
+           <div class="heading-box">
+              <h1>{{ section.settings.heading }}</h1>
+           </div>
+           <div class="paragraph-box">
+             <p>{{ section.settings.text }}</p>
+           </div>
+
+           <div class="buttons-box">
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+          </div>
+
+        </div>
     </div>
   </section>
   
@@ -200,13 +249,13 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "What our customers say"
+      "default": "Helping you start solids stress free"
     },
     {
       "type": "textarea",
       "id": "text",
       "label": "Text",
-      "default": "Real feedback from happy clients."
+      "default": "We simplify Starting Solids, helping you prepare nutritious meals and raise happy, healthy eaters—drama-free!"
     },
     {
       "type": "color",
