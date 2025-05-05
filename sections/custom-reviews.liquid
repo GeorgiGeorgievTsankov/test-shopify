@@ -91,12 +91,6 @@
 
 
     {% comment %} review-block-start {% endcomment %}
-      .review-block {
-        display: flex;
-        align-items: center;
-        gap: 16px; 
-        margin-bottom: 20px;
-      }
       
       .rating-stars-wrapper {
         width: auto;
@@ -105,13 +99,13 @@
         gap: 1px;
         border-radius: 100px;
         padding: 8px 14px;
-        background-color: white;
+        background-color: #FBE6E7;
       }
       
       .star {
         width: 18px;
         height: 18px;
-        background-image: url('{{ "star-icon.svg" | asset_url }}');
+        background-image: url('{{ "star-icon.svg" | image_url }}');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -145,7 +139,7 @@
     <div class="custom-container"
     >
         <div class="rating-stars-wrapper">
-            {% for block in section.blocks %}
+            {% comment %} {% for block in section.blocks %}
                 {% if block.type == 'review' %}
                   <div class="review-block">
                     <div class="rating-stars-wrapper">
@@ -156,8 +150,9 @@
                     <p class="review-text">{{ block.settings.text }}</p>
                   </div>
                 {% endif %}
-              {% endfor %}
-              
+              {% endfor %} {% endcomment %}
+              <div >star</div>
+              <div>text</div>
           </div>
         <h1>{{ section.settings.heading }}</h1>
         <p>{{ section.settings.text }}</p>
