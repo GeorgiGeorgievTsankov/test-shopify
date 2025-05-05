@@ -38,13 +38,13 @@
     }
     @media (max-width: 767px) {
         .custom-reviews-section {
-          background-image: url({{ section.settings.background_image_mobile | image_url: width: 800 }});
+          background-image: url({{ section.settings.background_image_mobile | image_url}});
         }
       }
     
       @media (min-width: 768px) {
         .custom-reviews-section {
-          background-image: url({{ section.settings.background_image_desktop | image_url: width: 1500 }});
+          background-image: url({{ section.settings.background_image_desktop | image_url}});
         }
       }
 
@@ -67,14 +67,6 @@
   <section class="section-custom-reviews-section">
     <div class="custom-reviews-section" 
          style="background-image: url({{ section.settings.background_image_desktop | image_url }});">
-    
-      {% if request.device_type == 'mobile' %}
-        <div class="custom-reviews-section" 
-             style="background-image: url({{ section.settings.background_image_mobile | image_url }});">
-      {% else %}
-        <div class="custom-reviews-section" 
-             style="background-image: url({{ section.settings.background_image_desktop | image_url }});">
-      {% endif %}
     
       <h1>{{ section.settings.heading }}</h1>
       <p>{{ section.settings.text }}</p>
