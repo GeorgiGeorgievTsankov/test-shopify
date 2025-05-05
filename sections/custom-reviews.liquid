@@ -40,6 +40,13 @@
         }
       }
 
+
+      .ornament-wave-box {
+        position: absolute;
+        top: 517px;
+        z-index: 2;
+      }
+
     .ornament-wave {
         position: absolute;
         top: 606px;
@@ -205,10 +212,18 @@
     
    </div>
 
-   {% if section.settings.show_bottom_ornament %}
+
+   <div class="ornament-wave-box"> 
+    {% if section.settings.show_bottom_ornament %}
     {% render 'ornament-wave' %}
     {% render 'ornament-wave-one' %}
-  {% endif %}
+    {% endif %}
+  </div>
+
+    {% if section.settings.show_bottom_ornament %}
+       {% render 'ornament-wave' %}
+       {% render 'ornament-wave-one' %}
+     {% endif %}
 
     <div class="custom-container"
     >
