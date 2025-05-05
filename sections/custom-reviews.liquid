@@ -11,7 +11,7 @@
       background: #FFFFFF;
 
     }
-    .custom-reviews-section {
+    .image-reviews-section {
       position: relative;
       width: 100%;
       max-width: 1440px;
@@ -27,23 +27,23 @@
       padding: 20px;
     }
   
-    .custom-reviews-section h1 {
+    .image-reviews-section h1 {
       font-size: 36px;
       margin-bottom: 10px;
     }
   
-    .custom-reviews-section p {
+    .image-reviews-section p {
       font-size: 18px;
       max-width: 800px;
     }
     @media (max-width: 767px) {
-        .custom-reviews-section {
+        .image-reviews-section {
           background-image: url({{ section.settings.background_image_mobile | image_url}});
         }
       }
     
       @media (min-width: 768px) {
-        .custom-reviews-section {
+        .image-reviews-section {
           background-image: url({{ section.settings.background_image_desktop | image_url}});
         }
       }
@@ -57,6 +57,24 @@
         overflow: hidden;
         z-index: 2;
       }
+
+      .custom-container {
+        position: absolute;
+        width: 830px; 
+        height: 321px;
+        top: 95px;
+        left: 305px; 
+        gap: 24px; 
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        border: 1px solid #000000;
+      }
       
   </style>
   
@@ -65,15 +83,18 @@
 
 
   <section class="section-custom-reviews-section">
-    <div class="custom-reviews-section" 
+    <div class="image-reviews-section" 
          style="background-image: url({{ section.settings.background_image_desktop | image_url }});">
-    
-      <h1>{{ section.settings.heading }}</h1>
-      <p>{{ section.settings.text }}</p>
-  
+ 
       {% if section.settings.show_bottom_ornament %}
         {% render 'ornament-wave' %}
       {% endif %}
+    </div>
+
+    <div class="custom-container"
+    >
+        <h1>{{ section.settings.heading }}</h1>
+        <p>{{ section.settings.text }}</p>
     </div>
   </section>
   
