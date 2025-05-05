@@ -57,6 +57,7 @@
         overflow: hidden;
         z-index: 2;
       }
+    
 
       .custom-container {
         position: absolute;
@@ -75,6 +76,55 @@
         color: white;
         border: 1px solid #000000;
       }
+
+      .rating-stars-wrapper {
+        width: 318.08px;
+        height: 34px;
+        display: flex;
+        gap: 1px;
+        border-radius: 100px;
+        padding: 8px 14px;
+        background-color:#FBE6E7;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+    {% comment %} review-block-start {% endcomment %}
+      .review-block {
+        display: flex;
+        align-items: center;
+        gap: 16px; 
+        margin-bottom: 20px;
+      }
+      
+      .rating-stars-wrapper {
+        width: auto;
+        height: 34px;
+        display: flex;
+        gap: 1px;
+        border-radius: 100px;
+        padding: 8px 14px;
+        background-color: white;
+      }
+      
+      .star {
+        width: 18px;
+        height: 18px;
+        background-image: url('{{ "star-icon.svg" | asset_url }}');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      
+      .review-text {
+        font-size: 16px;
+        max-width: 600px;
+        color: {{ section.settings.text_color }};
+      }
+
+      
+      
       
   </style>
   
@@ -88,11 +138,27 @@
  
       {% if section.settings.show_bottom_ornament %}
         {% render 'ornament-wave' %}
+        
       {% endif %}
     </div>
 
     <div class="custom-container"
     >
+        <div class="rating-stars-wrapper">
+            {% for block in section.blocks %}
+                {% if block.type == 'review' %}
+                  <div class="review-block">
+                    <div class="rating-stars-wrapper">
+                      {% for i in (1..block.settings.stars | plus: 0) %}
+                        <div class="star"></div>
+                      {% endfor %}
+                    </div>
+                    <p class="review-text">{{ block.settings.text }}</p>
+                  </div>
+                {% endif %}
+              {% endfor %}
+              
+          </div>
         <h1>{{ section.settings.heading }}</h1>
         <p>{{ section.settings.text }}</p>
     </div>
