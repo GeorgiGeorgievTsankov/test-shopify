@@ -141,6 +141,8 @@
         .buttons-box {
             width: 830px;
             height: 79px;
+            padding-top: 24px;
+            padding-bottom: 24px;
             display: flex;
             gap: 20px;
             justify-content: center;
@@ -195,10 +197,10 @@
      {% endif %}
    </div>
 
-    {% comment %} <div class="custom-container"
+    <div class="custom-container"
     >
         <div class="rating-stars-wrapper">
-              <div >star</div>
+              <div >star star</div>
               <div>text</div>
         </div>
         
@@ -206,8 +208,8 @@
             
            <div class="heading-box">
             <h1 style="color: {{ section.settings.text_color }};">{{ section.settings.heading | replace: 'Helping you start', 'Helping you start<br>' }}</h1>
+
            </div>
-           
            <div class="paragraph-box">
              <p>{{ section.settings.text }}</p>
            </div>
@@ -218,24 +220,9 @@
           </div>
 
         </div>
-    </div> {% endcomment %}
+    </div>
 
-    <div class="custom-container">
-        {% for block in section.blocks %}
-          {% if block.type == 'heading' %}
-            <h2>{{ block.settings.heading_text }}</h2>
-          {% elsif block.type == 'text' %}
-            <p>{{ block.settings.main_text }}</p>
-          {% elsif block.type == 'color' %}
-            <div style="color: {{ block.settings.text_color }};">This text has custom color!</div>
-          {% elsif block.type == 'primary_button' %}
-            <a href="{{ block.settings.primary_button_link }}" class="primary-button">{{ block.settings.primary_button_text }}</a>
-          {% elsif block.type == 'secondary_button' %}
-            <a href="{{ block.settings.secondary_button_link }}" class="secondary-button">{{ block.settings.secondary_button_text }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-      
+
     
   </section>
   
@@ -244,7 +231,7 @@
 
     
   
-{% comment %}   
+  
   
 {% schema %}
 {
@@ -353,120 +340,4 @@
     }
   ]
 }
-{% endschema %} {% endcomment %}
-
-
-
-{% schema %}
-{
-    "name": "Custom Reviews Section",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "background_image_desktop",
-        "label": "Background Image (Desktop)"
-      },
-      {
-        "type": "image_picker",
-        "id": "background_image_mobile",
-        "label": "Background Image (Mobile)"
-      },
-      {
-        "type": "range",
-        "id": "background_overlay_opacity",
-        "label": "Background Overlay Opacity",
-        "min": 0,
-        "max": 100,
-        "step": 5,
-        "unit": "%",
-        "default": 70
-      },
-      {
-        "type": "checkbox",
-        "id": "show_bottom_ornament",
-        "label": "Show Bottom Ornament",
-        "default": false
-      }
-    ],
-    "blocks": [
-      {
-        "type": "heading",
-        "name": "Heading",
-        "settings": [
-          {
-            "type": "text",
-            "id": "heading_text",
-            "label": "Heading Text",
-            "default": "Helping you start solids stress free"
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "name": "Text",
-        "settings": [
-          {
-            "type": "textarea",
-            "id": "main_text",
-            "label": "Main Text",
-            "default": "We simplify Starting Solids, helping you prepare nutritious meals and raise happy, healthy eaters—drama-free!"
-          }
-        ]
-      },
-      {
-        "type": "color",
-        "name": "Text Color",
-        "settings": [
-          {
-            "type": "color",
-            "id": "text_color",
-            "label": "Text Color",
-            "default": "#FFFFFF"
-          }
-        ]
-      },
-      {
-        "type": "primary_button",
-        "name": "Primary Button",
-        "settings": [
-          {
-            "type": "text",
-            "id": "primary_button_text",
-            "label": "Primary Button Text",
-            "default": "Browse library"
-          },
-          {
-            "type": "url",
-            "id": "primary_button_link",
-            "label": "Primary Button Link"
-          }
-        ]
-      },
-      {
-        "type": "secondary_button",
-        "name": "Secondary Button",
-        "settings": [
-          {
-            "type": "text",
-            "id": "secondary_button_text",
-            "label": "Secondary Button Text",
-            "default": "Shop products"
-          },
-          {
-            "type": "url",
-            "id": "secondary_button_link",
-            "label": "Secondary Button Link"
-          }
-        ]
-      }
-    ],
-    "max_blocks": 6,
-    "presets": [
-      {
-        "name": "Custom Reviews Section",
-        "category": "Custom"
-      }
-    ]
-  }
-  
 {% endschema %}
