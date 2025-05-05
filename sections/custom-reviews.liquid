@@ -175,6 +175,7 @@
         .secondary-button {
         background-color: #FBE6E7;
         color: black;
+        box-shadow: -4px 6px 0px 0px rgba(0, 0, 0, 0.25);
         }
 
 
@@ -184,13 +185,12 @@
 
   <section class="section-custom-reviews-section">
     <div class="image-reviews-section" 
-         style="background-image: url({{ section.settings.background_image_desktop | image_url }});">
- 
-      {% if section.settings.show_bottom_ornament %}
-        {% render 'ornament-wave' %}
-        
-      {% endif %}
-    </div>
+        style="background-image: url({{ section.settings.background_image_desktop | image_url }}); opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};">
+     
+     {% if section.settings.show_bottom_ornament %}
+       {% render 'ornament-wave' %}
+     {% endif %}
+   </div>
 
     <div class="custom-container"
     >
