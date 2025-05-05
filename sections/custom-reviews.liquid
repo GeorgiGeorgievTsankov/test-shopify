@@ -189,7 +189,7 @@
           {% if section.settings.background_image_desktop %}
             {{ section.settings.background_image_desktop | image_url }}
           {% else %}
-            {{ 'hero-test.png' | image_url }}
+            {{ 'hero-test.png' | asset_url }}
           {% endif %}
         ); opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};">
      {% if section.settings.show_bottom_ornament %}
