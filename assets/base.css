@@ -3148,5 +3148,8 @@ details-disclosure > details {
 }
 
 @font-face{ font-family: Agrandir; src: url(https://cdn.shopify.com/s/files/1/0947/2442/4009/files/Agrandir_Grand_Heavy_800.otf?v=1746463871)}
+h1{
+  font-family: Agrandir !important;
+}
 
 
