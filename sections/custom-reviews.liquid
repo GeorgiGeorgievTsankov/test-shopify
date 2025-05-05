@@ -158,6 +158,35 @@
           }
 
 
+        .primary-button,
+        .secondary-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 267px;
+        height: 55px;
+        padding: 18px 52px;
+        gap: 10px;
+        border-radius: 94px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        white-space: nowrap;
+        }
+
+        .primary-button {
+        background-color: #39A487;
+        }
+
+        .secondary-button {
+        background-color: #FBE6E7;
+        color: black;
+        }
+
+
+
     </style>
 
 
@@ -200,12 +229,15 @@
            </div>
 
            <div class="buttons-box">
-            <button class="btn btn-primary">Primary</button>
-            <button class="btn btn-secondary">Secondary</button>
+            {% render 'primary-button', text: section.settings.primary_button_text, link: section.settings.primary_button_link %}
+  {% render 'secondary-button', text: section.settings.secondary_button_text, link: section.settings.secondary_button_link %}
           </div>
 
         </div>
     </div>
+
+
+    
   </section>
   
   
@@ -261,7 +293,6 @@
       "type": "color",
       "id": "text_color",
       "label": "Text Color",
-      "default": "#000000"
     },
     {
       "type": "text",
