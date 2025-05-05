@@ -202,11 +202,13 @@
             {{ 'hero-test.png' | asset_url }}
           {% endif %}
         ); opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};">
-     {% if section.settings.show_bottom_ornament %}
-       {% render 'ornament-wave' %}
-       {% render 'ornament-wave-one' %}
-     {% endif %}
+    
    </div>
+
+   {% if section.settings.show_bottom_ornament %}
+    {% render 'ornament-wave' %}
+    {% render 'ornament-wave-one' %}
+  {% endif %}
 
     <div class="custom-container"
     >
