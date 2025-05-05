@@ -36,21 +36,17 @@
       font-size: 18px;
       max-width: 800px;
     }
-{% comment %}   
     @media (max-width: 767px) {
-      .custom-reviews-section {
-        height: auto;
-        padding: 60px 20px;
+        .custom-reviews-section {
+          background-image: url({{ section.settings.background_image_mobile | image_url: width: 800 }});
+        }
       }
-  
-      .custom-reviews-section h1 {
-        font-size: 28px;
+    
+      @media (min-width: 768px) {
+        .custom-reviews-section {
+          background-image: url({{ section.settings.background_image_desktop | image_url: width: 1500 }});
+        }
       }
-  
-      .custom-reviews-section p {
-        font-size: 16px;
-      }
-    } {% endcomment %}
 
     .ornament-wave {
         position: absolute;
