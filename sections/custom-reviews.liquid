@@ -40,23 +40,25 @@
         }
       }
 
-
-      .ornament-wave-box {
+    .ornament-wave {
         position: absolute;
-        top: 517px;
-        z-index: 2;
-      }
-
-    {% comment %} .ornament-wave {
-        position: absolute;
+        top: 586px;
         left: 0;
         width: 100%;
         height: 67px;
         overflow: hidden;
         z-index: 2;
-      } {% endcomment %}
+      }
 
-     
+      .ornament-wave-one {
+        position: absolute;
+        top: 564px;
+        left: 0;
+        width: 100%;
+        height: 67px;
+        overflow: hidden;
+        z-index: 2;
+      }
     
 
       .custom-container {
@@ -204,11 +206,7 @@
    </div>
 
 
-   <div class="ornament-wave-box"> 
-    {% if section.settings.show_bottom_ornament %}
-    {% render 'ornament-wave' %}
-    {% endif %}
-  </div>
+   
 
     {% if section.settings.show_bottom_ornament %}
        {% render 'ornament-wave' %}
