@@ -185,7 +185,7 @@
 
   <section class="section-custom-reviews-section">
     <div class="image-reviews-section" 
-        style="background-image: url({{ section.settings.background_image_desktop | image_url }}); opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};">
+        style="background-image: url({{ section.settings.background_image_desktop | default: 'assets/hero-test.png' | image_url }}); opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};">
      
      {% if section.settings.show_bottom_ornament %}
        {% render 'ornament-wave' %}
@@ -248,7 +248,6 @@
       "type": "image_picker",
       "id": "background_image_desktop",
       "label": "Background Image (Desktop)",
-      "default": "assets/hero-tets.png"
     },
     {
       "type": "image_picker",
