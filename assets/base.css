@@ -222,6 +222,105 @@
 }
 
 /* base */
+/* Agrandir Narrow – Condensed, Regular weight */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('https://cdn.shopify.com/s/files/1/0606/4809/5819/files/Agrandir-Narrow.otf?v=1743753398') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+/* Agrandir Text Bold – Bold */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('https://cdn.shopify.com/s/files/1/0606/4809/5819/files/Agrandir-TextBold.otf?v=1743753398') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Agrandir Grand Light – Light */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('https://cdn.shopify.com/s/files/1/0606/4809/5819/files/Agrandir-GrandLight.otf?v=1743753398') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Agrandir Wide Black Italic – Heavy, Italic and Expanded */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('https://cdn.shopify.com/s/files/1/0606/4809/5819/files/Agrandir-WideBlackItalic.otf?v=1743753398') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-stretch: expanded;
+}
+
+/* Agrandir Wide Light – Light, with expanded width */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('https://cdn.shopify.com/s/files/1/0606/4809/5819/files/Agrandir-WideLight.otf?v=1743753398') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: expanded;
+}
+
+/* Agrandir Grand Heavy – Heavy */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('https://cdn.shopify.com/s/files/1/0606/4809/5819/files/Agrandir-GrandHeavy.otf?v=1743753398') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Agrandir Tight – Condensed variant, Regular weight */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('https://cdn.shopify.com/s/files/1/0606/4809/5819/files/Agrandir-Tight.otf?v=1743753398') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: condensed;
+}
+
+/* Agrandir Thin Italic – Thin and Italic */
+@font-face {
+  font-family: 'Agrandir';
+  src: url('https://cdn.shopify.com/s/files/1/0606/4809/5819/files/Agrandir-ThinItalic.otf?v=1743753399') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+.padding-global {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.container-large {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-medium {
+  max-width: 830px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Agrandir';
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 120%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
 .no-js:not(html) {
   display: none !important;
@@ -413,26 +512,6 @@ body,
   font-weight: var(--font-body-weight);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-.h0,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5 {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-weight: var(--font-heading-weight);
-  letter-spacing: calc(var(--font-heading-scale) * 0.0rem);
-  color: rgb(var(--color-foreground));
-  line-height: calc(1 + 0.3 / max(1, var(--font-heading-scale)));
-  word-break: break-word;
-}
-
 .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
 }
@@ -441,78 +520,6 @@ h5,
   .hxl {
     font-size: calc(var(--font-heading-scale) * 6.2rem);
   }
-}
-
-.h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
-}
-
-@media only screen and (min-width: 750px) {
-  .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
-  }
-}
-
-h1,
-.h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
-}
-
-@media only screen and (min-width: 750px) {
-  h1,
-  .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
-  }
-}
-
-h2,
-.h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
-}
-
-@media only screen and (min-width: 750px) {
-  h2,
-  .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
-  }
-}
-
-h3,
-.h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
-}
-
-@media only screen and (min-width: 750px) {
-  h3,
-  .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
-  }
-}
-
-h4,
-.h4 {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-size: calc(var(--font-heading-scale) * 1.5rem);
-}
-
-h5,
-.h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
-}
-
-@media only screen and (min-width: 750px) {
-  h5,
-  .h5 {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
-  }
-}
-
-h6,
-.h6 {
-  color: rgba(var(--color-foreground), 0.75);
-  margin-block-start: 1.67em;
-  margin-block-end: 1.67em;
 }
 
 blockquote {

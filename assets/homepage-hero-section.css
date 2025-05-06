@@ -1,0 +1,179 @@
+
+    .section-custom-reviews-section {
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+      height: 623px;
+      margin: 0 auto;
+      background-size: cover;
+      background-position: center;
+      background: #FFFFFF;
+    }
+    
+    .image-reviews-section {
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+      height: 573px;
+      margin: auto;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .ornament-wave {
+        position: absolute;
+        top: 546px;
+        left: 0;
+        width: 100%;
+        height: 67px;
+        overflow: hidden;
+        z-index: 2;
+      }
+
+      .ornament-wave-one {
+        position: absolute;
+        top: 524px;
+        left: 0;
+        width: 100%;
+        height: 67px;
+        overflow: hidden;
+        z-index: 2;
+      }
+    
+
+      .custom-container {
+        position: absolute;
+        width: 830px; 
+        height: 321px;
+        top: 95px;
+        left: 305px; 
+        gap: 24px; 
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        color: white;
+      }
+
+      .rating-stars-wrapper {
+        width: 318.08px;
+        height: 34px;
+        display: flex;
+        gap: 1px;
+        border-radius: 100px;
+        padding: 8px 14px;
+        background-color:#FBE6E7;
+        align-items: center;
+        justify-content: center;
+      }
+
+      
+      .star {
+        width: 12px;
+        height: 12px;
+        background-image: url('{{ "star-icon.svg" | image_url }}');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+      
+      
+      .review-text {
+        width: 198;
+        height: 18;
+        font-size: 12px;
+        color: #1D4653;
+      }
+
+      .text-box {
+        width: 830px;
+        height: 263px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      
+
+    
+     .heading-box {
+          width: 778px;
+          height: 154px;
+          font-family: 'Agrandir', sans-serif;
+          font-weight: 800;
+          font-size: 64px;
+          line-height: 120%;
+          letter-spacing: 0;
+          text-align: center;
+          color: #FFFFFF;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    
+  
+        .paragraph-box{
+            width: 830;
+            height: 22;
+            font-family: Agrandir;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 120%;
+            letter-spacing: 0%;
+            text-align: center;
+            vertical-align: middle;
+            color: #FFFFFF;
+
+        }
+
+
+        .buttons-box {
+            width: 830px;
+            height: 79px;
+            padding-top: 24px;
+            padding-bottom: 24px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+          }
+
+
+        .primary-button,
+        .secondary-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 267px;
+        height: 55px;
+        padding: 18px 52px;
+        gap: 10px;
+        border-radius: 94px;
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        white-space: nowrap;
+        }
+
+        .primary-button {
+        background-color: #39A487;
+        }
+
+        .secondary-button {
+        background-color: #FBE6E7;
+        color: black;
+        box-shadow: -4px 6px 0px 0px rgba(0, 0, 0, 0.25);
+        }
