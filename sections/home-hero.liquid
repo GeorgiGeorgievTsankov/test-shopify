@@ -14,6 +14,31 @@
             background-image: url("{{ section.settings.background_image_mobile | image_url: "768px" }}");
         }
     }
+
+
+.buttons-box {
+  display: flex;
+  gap: 10px; 
+  justify-content: center; 
+}
+
+.buttons-box .primary-button,
+.buttons-box .secondary-button {
+  flex: 1;
+  min-width: 150px; 
+}
+
+@media screen and (max-width: 768px) {
+  .buttons-box {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buttons-box .primary-button,
+  .buttons-box .secondary-button {
+    width: 100%; 
+  }
+}
+
 {% endstyle %}
 
 <div class="homep-hero-section">
@@ -23,46 +48,51 @@
         {% render 'ornament-wave' %}
     {% endif %}
     <div class="padding-global">
-        <div class="container-medium">
-            <div class="home-hero-wrapper">
-                {% for block in section.blocks %}
-                    {% if block.type == 'review' %}
-                        <div class="rating-stars-wrapper">
-                            <div class="stars">
-                                {% assign star_count = block.settings.stars | plus: 0 %}
-                                {% for i in (1..star_count) %}
+      <div class="container-medium">
+        <div class="home-hero-wrapper">
+            {% for block in section.blocks %}
+                {% if block.type == 'review' %}
+                    <div class="rating-stars-wrapper">
+                        <div class="stars">
+                            {% assign star_count = block.settings.stars | plus: 0 %}
+                            {% for i in (1..star_count) %}
                                 <img src="{{ 'star.svg' | asset_url }}" width="90px" height="18px" alt="star" class="star-icon" />
-                                {% endfor %}
-                            </div>
-                            <div class="review-text">
-                                <p>{{ block.settings.text }}</p>
-                            </div>
+                            {% endfor %}
                         </div>
-                    {% endif %}
-                {% endfor %}
-                {% if section.settings.heading %}
-                 <h1 class="home-hero-heading">{{ section.settings.heading }}</h1>
+                        <div class="review-text">
+                            <p>{{ block.settings.text }}</p>
+                        </div>
+                    </div>
                 {% endif %}
-                {% if section.settings.text %}
-                    <p>{{ section.settings.text }}</p>
+                {% if block.type == 'heading'%}
+                    <h1 class="home-hero-heading" style="color: {{ block.settings.text_color }};">{{ block.settings.heading }}</h1>
                 {% endif %}
-                <div class="buttons-box">
-                    {% render 'primary-button', text: section.settings.primary_button_text, link: section.settings.primary_button_link %}
-                    {% render 'secondary-button', text: section.settings.secondary_button_text, link: section.settings.secondary_button_link %}
-                </div>
-            </div>
+    
+                {% if block.type == 'paragraph' %}
+                    <p>{{ block.settings.text_paragraph }}</p>
+                {% endif %}
+    
+                {% if block.type == 'buttons' %}
+                  <div class="buttons-box">
+                    {% render 'primary-button', text: block.settings.primary_button_text, link: block.settings.primary_button_link %}
+                    {% render 'secondary-button', text: block.settings.secondary_button_text, link: block.settings.secondary_button_link %}
+                  </div>
+                {% endif %}
+            {% endfor %}
         </div>
+    </div>
+    
     </div>
 </div>
 
 {% schema %}
- {
+{
   "name": "Home Hero",
   "settings": [
     {
       "type": "image_picker",
       "id": "background_image_desktop",
-      "label": "Background Image (Desktop)",
+      "label": "Background Image (Desktop)"
     },
     {
       "type": "image_picker",
@@ -77,57 +107,74 @@
       "max": 100,
       "step": 5,
       "unit": "%",
-      "default": 40,
+      "default": 40
     },
     {
       "type": "checkbox",
       "id": "show_bottom_ornament",
       "label": "Show Bottom Ornament",
       "default": false
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Helping you start solids stress free"
-    },
-    {
-      "type": "textarea",
-      "id": "text",
-      "label": "Text",
-      "default": "We simplify Starting Solids, helping you prepare nutritious meals and raise happy, healthy eaters—drama-free!"
-    },
-    {
-        "type": "color",
-        "id": "text_color",
-        "label": "Text Color",
-        "default": "#FFFFFF",
-    },
-      
-    {
-      "type": "text",
-      "id": "primary_button_text",
-      "label": "Primary Button Text",
-      "default": "Browse library"
-    },
-    {
-      "type": "url",
-      "id": "primary_button_link",
-      "label": "Primary Button Link"
-    },
-    {
-      "type": "text",
-      "id": "secondary_button_text",
-      "label": "Secondary Button Text",
-      "default": "Shop products"
-    },
-    {
-      "type": "url",
-      "id": "secondary_button_link",
-      "label": "Secondary Button Link"
     }
   ],
   "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Helping you start solids stress free"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Text Paragraph",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text_paragraph",
+          "label": "Text",
+          "default": "We simplify Starting Solids, helping you prepare nutritious meals and raise happy, healthy eaters—drama-free!"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "Buttons",
+      "settings": [
+        {
+          "type": "text",
+          "id": "primary_button_text",
+          "label": "Primary Button Text",
+          "default": "Browse library"
+        },
+        {
+          "type": "url",
+          "id": "primary_button_link",
+          "label": "Primary Button Link"
+        },
+        {
+          "type": "text",
+          "id": "secondary_button_text",
+          "label": "Secondary Button Text",
+          "default": "Shop products"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "Secondary Button Link"
+        }
+      ]
+    }, 
     {
       "type": "review",
       "name": "Review",
@@ -154,12 +201,19 @@
       ]
     }
   ],
-  "max_blocks": 6,
-  "presets": [
-    {
-      "name": "Home Hero",
-      "category": "Custom"
-    }
-  ]
+  "max_blocks": 5,
+ "presets": [
+  {
+    "name": "Home Hero",
+    "category": "Custom",
+    "blocks": [
+      { "type": "heading" },
+      { "type": "paragraph" },
+      { "type": "buttons" },
+      { "type": "review" }
+    ]
+  }
+]
+
 }
 {% endschema %}
