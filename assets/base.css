@@ -80,6 +80,36 @@
   --alpha-button-background: 1;
 }
 
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 52px; 
+  gap: 10px;
+  border-radius: 94px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  max-width: 100%;
+  height: auto; 
+}
+
+
+ .primary-button {
+   background-color: #39A487;
+  }
+
+  .secondary-button {
+    background-color: #FBE6E7;
+    color: black;
+    box-shadow: -4px 6px 0px 0px rgba(0, 0, 0, 0.25);
+  }
+
+
 .color-background-2 .button--secondary,
 .color-accent-1 .button--secondary,
 .color-accent-2 .button--secondary {

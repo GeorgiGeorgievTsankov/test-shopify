@@ -3,13 +3,14 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #FFFFFF;
 }
 
 .welcome-image{
     width: 50%;
     height: auto;
     margin-right: 20px;
+    background-size: cover;
 }
 
 .welcome-image img {
@@ -19,7 +20,13 @@
     display: block;
   }
 
-  .welcome-text {
-    width: 50%;
+  
+.welcome-text {
+    width: 45%;
     padding-left: 20px; 
+    margin-left: auto;
+}
+
+.welcome-text p{
+ margin-bottom: 35px;   
 }
