@@ -14,6 +14,8 @@
           <h2 style="color: {{ block.settings.heading_color }};">{{ block.settings.text }}</h2>
         {% when 'paragraph' %}
           <p>{{ block.settings.text }}</p>
+        {% when 'paragraph_2' %}
+          <p>{{ block.settings.text_2 }}</p>
         {% when 'button' %}
             {% render 'secondary-button',
                 text: block.settings.label_button,
@@ -63,11 +65,23 @@
           "type": "text",
           "id": "text",
           "label": "Paragraph Text",
-          "default": "Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze.\nWe help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!"
+          "default": "Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze."
 
         }
       ]
     },
+    {
+      "type": "paragraph_2",
+       "name": "Paragraph 2",
+      "settings": [
+          {
+          "type": "text",
+          "id": "text_2",
+          "label": "Second Paragraph Text",
+          "default": "We help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!"
+          }
+        ]
+   },
     {
       "type": "button",
       "name": "Button",
@@ -108,6 +122,9 @@
         },
         {
           "type": "paragraph"
+        },
+        {
+          "type": "paragraph_2"
         },
         {
           "type": "button"
