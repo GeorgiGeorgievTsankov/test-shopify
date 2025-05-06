@@ -1,19 +1,96 @@
+{{ 'welcome-content-section.css' | asset_url | stylesheet_tag }}
 
-<section class="welcome-section" style="text-align: center; padding: 60px 20px;">
-    <h2>Welcome to Starting Solids Australia</h2>
-</section>
-
+<div class="welcome-content">
+    
+  <div class="welcome-image">
+    <img src="{{ section.settings.welcome_image | image_url }}" alt="Welcome to Starting Solids Australia" />
+  </div>
+  <div class="welcome-text">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'heading' %}
+          <h2>{{ block.settings.text }}</h2>
+        {% when 'paragraph' %}
+          <p>{{ block.settings.text }}</p>
+        {% when 'button' %}
+          <a href="{{ block.settings.link }}" class="welcome-button">
+            {{ block.settings.label_button }}
+          </a>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
 
 {% schema %}
 {
   "name": "Welcome Section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "welcome_image",
+      "label": "Welcome Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Heading Text",
+          "default": "Welcome to Starting Solids Australia"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Paragraph Text",
+          "default": "Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze.\nWe help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!"
+
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label_button",
+          "label": "Button Label",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 5,
   "presets": [
     {
-      "name": "Welcome to Starting Solids Australia"
+      "name": "Welcome to Starting Solids Australia",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "button"
+        }
+      ]
     }
   ]
 }
 {% endschema %}
-
-
