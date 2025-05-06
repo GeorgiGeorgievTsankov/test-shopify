@@ -1,0 +1,116 @@
+{{ 'solids-library-section.css' | asset_url | stylesheet_tag }}
+
+
+
+
+<div class="solids-library-wrapper">
+    <div class="solids-library-content">
+      {% for block in section.blocks %}
+        {% if block.type == 'heading' %}
+            <h2 id="title-solid" style="color: {{ block.settings.heading_color }};">{{ block.settings.text }}</h2>
+        {% elsif block.type == 'paragraph' %}
+          <p id="text-solid">{{ block.settings.text }}</p>
+        {% elsif block.type == 'button' %}
+            {% render 'secondary-button',
+                text: block.settings.label_button,
+                link: section.settings.secondary_button_link,
+                bg_color: block.settings.button_color,
+                text_color: block.settings.text_color
+            %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="solids-library-image">
+        <img  src="{{ images['solids-section.png'] | image_url: width: 500 | image_tag:true }}" alt="Solids Library" />
+    </div>
+  </div>
+
+
+
+
+
+{% schema %}
+{
+  "name": "Solids Library",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Heading Text",
+          "default": "Start Your Solids Library"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#E49AA3"
+        }  
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Paragraph Text",
+          "default": "Browse our library of information and recipes to get you started on solids. Unlock extra exclusive content including crash course and members forum with our starting solids membership!"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label_button",
+          "label": "Button Text",
+          "default": "Explore Now"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "Button Link"
+        },
+        {
+            "type": "color",
+            "id": "button_color",
+            "label": "Button Background Color",
+            "default": "#39A487"
+          },
+          {
+            "type": "color",
+            "id": "text_color",
+            "label": "Button Text Color",
+            "default": "#FFFFFF"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Solids Library",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
