@@ -51,4 +51,28 @@
     }
   }
   
-
+  .solids-library-content {
+    position: relative;
+    padding: 40px;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .decor-image {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .image-top-left {
+    top: 0;
+    left: 0;
+  }
+  
+  .image-bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+  
