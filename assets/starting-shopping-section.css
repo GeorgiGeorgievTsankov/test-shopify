@@ -1,0 +1,50 @@
+.starting-shop-wrapper {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .starting-shop-content {
+    width: 45%;
+    padding: 10px;
+  }
+  
+  .starting-shop-image {
+    width: 45%;
+    overflow: hidden;
+  }
+  
+  .starting-shop-heading {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .starting-shop-description {
+    margin-bottom: 20px;
+  }
+  
+  
+  .starting-shop-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+ 
+  @media screen and (max-width: 768px) {
+    .starting-shop-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .starting-shop-content, .starting-shop-image {
+      width: 90%; 
+      margin-bottom: 20px;
+    }
+  }
+  

@@ -1,7 +1,111 @@
+{{ 'starting-shopping-section.css' | asset_url | stylesheet_tag }}
+
+
 <div class="starting-shop-wrapper">
+    <div class="starting-shop-image">
+        <img src="{{ images['Group_9.png'] | image_url: small }}" alt="Starting Shop Image">
+    </div>
     <div class="starting-shop-content">
         {% for block in section.blocks %}
-           {}
+           {% if block.type == 'heading' %}
+            <h2 class="starting-shop-heading" style="color: {{ block.settings.heading_color }};">{{ block.settings.text }}</h2>
+           {% elsif block.type == 'paragraph' %}
+                <p class="starting-shop-description">{{block.settings.description}}</p>
+           {% elsif block.type == 'button' %}
+                {% render 'secondary-button',
+                    text: block.settings.label_button,
+                    link: section.settings.secondary_button_link, 
+                    bg_color: block.settings.button_color,
+                    text_color: block.settings.text_color
+                %}
+            {% endif %}
         {% endfor %}
-       
+    </div>
 </div>
+
+
+
+{% schema %}
+{
+  "name": "Starting Shop",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Heading Text",
+          "default": "Starting Solids Shop"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Text Color",
+          "default": "#E49AA3"
+        },
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph",
+      "settings": [
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description Text",
+          "default": "Our exclusive range of products have been purposefully designed to support your little one's learning and development. Shop the best quality and best function suction ware on the market right here!"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label_button",
+          "label": "Button Text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "label": "Button Background Color",
+          "default": "#39A487"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Button Text Color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "url",
+          "id": "secondary_button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Starting Shop",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
