@@ -104,7 +104,8 @@
         "heading_jGyU4i": {
           "type": "heading",
           "settings": {
-            "text": "Start Your Solids Library"
+            "text": "Start Your Solids Library",
+            "heading_color": "#e49aa3"
           }
         },
         "paragraph_DtKaXf": {
@@ -118,8 +119,8 @@
           "settings": {
             "label_button": "Explore Now",
             "secondary_button_link": "",
-            "button_color": "#39A487",
-            "text_color": "#FFFFFF"
+            "button_color": "#39a487",
+            "text_color": "#ffffff"
           }
         }
       },
@@ -130,11 +131,46 @@
       ],
       "name": "Solids Library",
       "settings": {}
+    },
+    "starting_shop_NTcAya": {
+      "type": "starting-shop",
+      "blocks": {
+        "heading_qyhBRi": {
+          "type": "heading",
+          "settings": {
+            "text": "Starting Solids Shop",
+            "heading_color": "#E49AA3"
+          }
+        },
+        "paragraph_gqVtP4": {
+          "type": "paragraph",
+          "settings": {
+            "description": "Our exclusive range of products have been purposefully designed to support your little one's learning and development. Shop the best quality and best function suction ware on the market right here!"
+          }
+        },
+        "button_qgVUNe": {
+          "type": "button",
+          "settings": {
+            "label_button": "Shop Now",
+            "button_color": "#39A487",
+            "text_color": "#FFFFFF",
+            "secondary_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_qyhBRi",
+        "paragraph_gqVtP4",
+        "button_qgVUNe"
+      ],
+      "name": "Starting Shop",
+      "settings": {}
     }
   },
   "order": [
     "home_hero_re6hGT",
     "welcome_to_starting_cCQTDA",
-    "solids_library_RXCtXH"
+    "solids_library_RXCtXH",
+    "starting_shop_NTcAya"
   ]
 }
