@@ -75,7 +75,7 @@
     .decor-image-broccoli,
     .decor-image-strawberry,
     .decor-image-avocado {
-      display: block;
+      display: none;
     }
   }
   
