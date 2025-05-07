@@ -15,7 +15,25 @@
         </div>
         <div class="right">
             <a href="{{ section.settings.browse_link }}" class="browse-button">browse library ></a>
+        </div>
     </div>
+    <div class="card-container">
+        {% assign cards = section.blocks | where: "type", "product_card" | slice: 0, 3 %}
+        {% for block in cards %}
+          {% assign product = all_products[block.settings.product] %}
+          {% if product %}
+            <a href="{{ product.url }}" class="card">
+              <img 
+                src="{{ product.featured_image | image_url: width: small }}" 
+                alt="{{ product.title }}" 
+                width="400" 
+                height="auto"
+              />
+              <p class="card-text">{{ product.title | truncate: 50 }}</p>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>      
 </div>
 
 
@@ -62,7 +80,19 @@
           "type": "color",
           "id": "description_color",
           "label": "Description Color",
-          "default": "#000000"
+          "default": "#39A487"
+        }
+      ]
+    }
+,
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
         }
       ]
     }

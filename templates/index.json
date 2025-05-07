@@ -139,7 +139,7 @@
           "type": "heading",
           "settings": {
             "text": "Starting Solids Shop",
-            "heading_color": "#E49AA3"
+            "heading_color": "#e49aa3"
           }
         },
         "paragraph_gqVtP4": {
@@ -152,8 +152,8 @@
           "type": "button",
           "settings": {
             "label_button": "Shop Now",
-            "button_color": "#39A487",
-            "text_color": "#FFFFFF",
+            "button_color": "#39a487",
+            "text_color": "#ffffff",
             "secondary_button_link": ""
           }
         }
@@ -165,12 +165,61 @@
       ],
       "name": "Starting Shop",
       "settings": {}
+    },
+    "starting_solids_recipes_pgqeUm": {
+      "type": "starting-solids-recipes",
+      "blocks": {
+        "heading_4mUxeP": {
+          "type": "heading",
+          "settings": {
+            "text": "Starting Solids Recipes",
+            "heading_color": "#e49aa3"
+          }
+        },
+        "description_cMEBUj": {
+          "type": "description",
+          "settings": {
+            "text_description": "Make starting solids a breeze with recipes, resources and personalised support from our team of paediatric dietitian's and feeding therapists",
+            "description_color": "#000000"
+          }
+        },
+        "product_card_DgWEHH": {
+          "type": "product_card",
+          "settings": {
+            "product": "the-3p-fulfilled-snowboard"
+          }
+        },
+        "product_card_3ULBKd": {
+          "type": "product_card",
+          "settings": {
+            "product": "the-collection-snowboard-hydrogen"
+          }
+        },
+        "product_card_9DqGqz": {
+          "type": "product_card",
+          "settings": {
+            "product": "the-collection-snowboard-liquid"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4mUxeP",
+        "description_cMEBUj",
+        "product_card_DgWEHH",
+        "product_card_3ULBKd",
+        "product_card_9DqGqz"
+      ],
+      "name": "Starting Solids Recipes",
+      "settings": {
+        "browse_link": ""
+      }
     }
   },
   "order": [
     "home_hero_re6hGT",
     "welcome_to_starting_cCQTDA",
     "solids_library_RXCtXH",
-    "starting_shop_NTcAya"
+    "starting_shop_NTcAya",
+    "starting_solids_recipes_pgqeUm"
   ]
 }
