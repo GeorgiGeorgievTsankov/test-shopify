@@ -9,36 +9,132 @@
  */
 {
   "sections": {
-    "home_hero_m84PwK": {
+    "home_hero_re6hGT": {
       "type": "home-hero",
       "blocks": {
-        "review_cFD8EF": {
+        "review_BMdBdg": {
           "type": "review",
           "settings": {
             "stars": "5",
             "text": "+480 mothers are already using it"
           }
+        },
+        "heading_gc44BD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Helping you start solids stress free",
+            "text_color": "#ffffff"
+          }
+        },
+        "paragraph_CdW3Fn": {
+          "type": "paragraph",
+          "settings": {
+            "text_paragraph": "We simplify Starting Solids, helping you prepare nutritious meals and raise happy, healthy eaters—drama-free!"
+          }
+        },
+        "buttons_eQwfdV": {
+          "type": "buttons",
+          "settings": {
+            "primary_button_text": "Browse library",
+            "primary_button_link": "",
+            "secondary_button_text": "Shop products",
+            "secondary_button_link": ""
+          }
         }
       },
       "block_order": [
-        "review_cFD8EF"
+        "review_BMdBdg",
+        "heading_gc44BD",
+        "paragraph_CdW3Fn",
+        "buttons_eQwfdV"
       ],
       "name": "Home Hero",
       "settings": {
         "background_image_desktop": "shopify://shop_images/home-hero-image_1.png",
         "background_overlay_opacity": 40,
-        "show_bottom_ornament": true,
-        "heading": "Helping you start solids stress free",
-        "text": "We simplify Starting Solids, helping you prepare nutritious meals and raise happy, healthy eaters—drama-free!",
-        "text_color": "#FFFFFF",
-        "primary_button_text": "Browse library",
-        "primary_button_link": "",
-        "secondary_button_text": "Shop products",
-        "secondary_button_link": ""
+        "show_bottom_ornament": false
       }
+    },
+    "welcome_to_starting_cCQTDA": {
+      "type": "welcome-to-starting",
+      "blocks": {
+        "heading_FfN6fA": {
+          "type": "heading",
+          "settings": {
+            "text": "Welcome to Starting Solids Australia",
+            "heading_color": "#e49aa3"
+          }
+        },
+        "paragraph_qWxnBi": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze."
+          }
+        },
+        "paragraph_2_jUAg6h": {
+          "type": "paragraph_2",
+          "settings": {
+            "text_2": "We help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!"
+          }
+        },
+        "button_z8ed3w": {
+          "type": "button",
+          "settings": {
+            "label_button": "Learn More",
+            "secondary_button_link": "",
+            "button_color": "#39a487",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "heading_FfN6fA",
+        "paragraph_qWxnBi",
+        "paragraph_2_jUAg6h",
+        "button_z8ed3w"
+      ],
+      "name": "Welcome to Starting Solids Australia",
+      "settings": {
+        "welcome_image": "shopify://shop_images/welcome-to-starting-solids.png"
+      }
+    },
+    "solids_library_RXCtXH": {
+      "type": "solids-library",
+      "blocks": {
+        "heading_jGyU4i": {
+          "type": "heading",
+          "settings": {
+            "text": "Start Your Solids Library"
+          }
+        },
+        "paragraph_DtKaXf": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Browse our library of information and recipes to get you started on solids. Unlock extra exclusive content including crash course and members forum with our starting solids membership!"
+          }
+        },
+        "button_9hqAXz": {
+          "type": "button",
+          "settings": {
+            "label_button": "Explore Now",
+            "secondary_button_link": "",
+            "button_color": "#39A487",
+            "text_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jGyU4i",
+        "paragraph_DtKaXf",
+        "button_9hqAXz"
+      ],
+      "name": "Solids Library",
+      "settings": {}
     }
   },
   "order": [
-    "home_hero_m84PwK"
+    "home_hero_re6hGT",
+    "welcome_to_starting_cCQTDA",
+    "solids_library_RXCtXH"
   ]
 }
