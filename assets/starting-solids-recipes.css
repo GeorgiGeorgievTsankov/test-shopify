@@ -1,0 +1,38 @@
+.starting-solids-recipes-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    border: 1px solid black;
+}
+
+.top-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.right{
+    display: flex;
+    justify-content: end;
+    width: 50%;
+    align-self: end;
+}
+
+.right a{
+    text-decoration: none;
+    color: #39A487;
+    font-weight: 700;
+    font-size: 0.8em;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    max-width: 50%;
+    font-size: 0.9em;
+}
