@@ -19,13 +19,13 @@
             %}
         {% endif %}
       {% endfor %}
-      <img src="{{ 'fruit.png' | asset_url }}" width="200" height="200" class="decor-image image-top-left" alt="Fruit decoration">
-      <img src="{{ 'heart.png' | asset_url }}" width="100" height="100" class="decor-image image-bottom-right" alt="Heart decoration">
+      <img src="{{ images['heart-icon.png'] | image_url: small }}"  class="decor-image image-top-left" alt="Fruit decoration">
+      <img src="{{ images['fruit-icon.png'] | image_url: small }}"  class="decor-image image-bottom-right" alt="Heart decoration">
     </div>
     <div class="solids-library-image">
         {% comment %} <img  src="{{ images['solids-section.png'] | image_url: width: 500 | image_tag:true }}" alt="Solids Library" /> {% endcomment %}
         <picture>
-            <source srcset="{{ images['starting-solids.png'] | image_url: width: medium }}" media="(max-width: 768px)">
+            <source srcset="{{ images['starting-solids.png'] | image_url: width: 500  }}" media="(max-width: 768px)">
             <img src="{{ images['solids-section.png'] | image_url: width: 500 }}" alt="Solids Library">
         </picture> 
     </div>

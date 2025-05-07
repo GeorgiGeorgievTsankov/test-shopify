@@ -10,9 +10,11 @@
  
 }
 .solids-library-content {
-  padding: 40px;
-  flex: 1;
-}
+    position: relative;
+    padding: 40px;
+    flex: 1;
+    overflow: hidden;
+  }
 .solids-library-image {
   flex: 1;
 }
@@ -51,13 +53,6 @@
     }
   }
   
-  .solids-library-content {
-    position: relative;
-    padding: 40px;
-    flex: 1;
-    overflow: hidden;
-  }
-  
   .decor-image {
     position: absolute;
     width: 100px;
@@ -67,12 +62,27 @@
   }
   
   .image-top-left {
-    top: 0;
-    left: 0;
+    top: 55px;
+    left: 10px;
+    max-width: 80px;
   }
   
   .image-bottom-right {
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    right: 10px;
+    max-width: 80px;
   }
   
+  @media screen and (max-width: 768px) {
+    .image-top-left {
+        top: 25px;
+        left: 10px;
+        max-width: 50px;
+      }
+      
+      .image-bottom-right {
+        bottom: 20px;
+        right: 10px;
+        max-width: 50px;
+      }
+  }
