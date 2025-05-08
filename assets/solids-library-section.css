@@ -7,6 +7,8 @@
   background-color: #F8E3E4;
   text-align: center;
   align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
  
 }
 .solids-library-content {
@@ -42,6 +44,8 @@
     .solids-library-wrapper {
       flex-direction: column;
       text-align: center;
+      margin-right: 15px;
+      margin-left: 15px;
     }
   
     .solids-library-content {
@@ -62,7 +66,7 @@
   }
   
   .image-top-left {
-    top: 55px;
+    top: 45px;
     left: 10px;
     max-width: 80px;
   }
@@ -75,7 +79,7 @@
   
   @media screen and (max-width: 768px) {
     .image-top-left {
-        top: 25px;
+        top: 15px;
         left: 10px;
         max-width: 50px;
       }
