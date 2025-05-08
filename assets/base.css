@@ -337,13 +337,21 @@
   margin-right: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   font-family: 'Agrandir';
   font-weight: 900;
 }
 
+p {
+  font-stretch: condensed;
+}
+
 h1 {
   font-size: 64px;
+  line-height: 120%;
+}
+
+h2 {
   line-height: 120%;
 }
 
