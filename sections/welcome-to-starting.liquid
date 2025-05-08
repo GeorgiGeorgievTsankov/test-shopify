@@ -15,7 +15,7 @@
               {% when 'heading' %}
                 <h2 style="color: {{ block.settings.heading_color }};">{{ block.settings.text }}</h2>
               {% when 'paragraph' %}
-                <div>{{ block.settings.text }}</div>
+                <div><p>{{ block.settings.text }}</p></div>
               {% when 'button' %}
                   {% render 'secondary-button',
                       text: block.settings.label_button,

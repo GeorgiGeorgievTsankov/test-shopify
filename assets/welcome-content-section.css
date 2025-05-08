@@ -39,11 +39,10 @@
 }
 
 .welcome-text div p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 130%;
   color: #1D4653;
   font-stretch: condensed;
-  font-weight: 100;
 }
 
 @media (max-width: 768px) {
@@ -70,5 +69,10 @@
       text-align: center;
       padding-top: 20px;
     }
+
+    .welcome-content-wrapper {
+      gap: 0px;
+      grid-template-columns: 1fr;
+  }
   }
   
