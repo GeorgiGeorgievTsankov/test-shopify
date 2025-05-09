@@ -4,7 +4,8 @@
  
 <div class="support-advice-wrapper">
     <div class="support-advice-image">
-      <img src="{{ 'support-advice.png' | asset_url }}" alt="Support image" width="500" height="auto" />
+        <img class="img-desktop" src="{{ images['support-advice.png'] | image_url }}" alt="Support image" />
+        <img class="img-mobile" src="{{ images['woman_child.png'] | image_url }}" alt="Woman & child image" />
     </div>
     <div class="support-advice-text">
       {% for block in section.blocks %}
@@ -12,7 +13,7 @@
           <h2>{{ block.settings.heading }}</h2>
         {% endif %}
         {% if block.settings.text != blank %}
-          <div>{{ block.settings.text }}</div>
+          <p>{{ block.settings.text }}</p>
         {% endif %}
       {% endfor %}
     </div>

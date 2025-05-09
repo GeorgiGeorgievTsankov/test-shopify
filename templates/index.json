@@ -37,9 +37,45 @@
       "settings": {
         "background_color": "#f8e3e4"
       }
+    },
+    "our_approach_D8BDK9": {
+      "type": "our-approach",
+      "blocks": {
+        "text_aLkKx6": {
+          "type": "text",
+          "settings": {
+            "heading": "Our Approach",
+            "text": "<p>We believe there is no one-size-fits-all approach to feeding babies. Every child is different, and we support parents in finding the best way to wean their baby with confidence.By encouraging responsive feeding methods, we help families create a joyful and healthy relationship with food, fostering positive connections and long-term healthy habits.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_aLkKx6"
+      ],
+      "name": "Our-Approach",
+      "settings": {}
+    },
+    "seupport_adviced_YKqQgK": {
+      "type": "seupport-adviced",
+      "blocks": {
+        "text_ggmzfY": {
+          "type": "text",
+          "settings": {
+            "heading": "Support & Non-Judgmental Advice",
+            "text": "<p>Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze.</p><p> We help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_ggmzfY"
+      ],
+      "name": "Support & Advice",
+      "settings": {}
     }
   },
   "order": [
-    "our_story_4ykpez"
+    "our_story_4ykpez",
+    "our_approach_D8BDK9",
+    "seupport_adviced_YKqQgK"
   ]
 }
