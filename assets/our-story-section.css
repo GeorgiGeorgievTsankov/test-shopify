@@ -1,7 +1,6 @@
 .our-story-section {
     position: relative;
     width: 100%;
-    max-height: 563px;
     overflow: hidden;
     padding: auto;
   }
@@ -17,7 +16,6 @@
     gap: 150px;
     max-width: 1200px;
     align-self: center;
-    justify-content: center;
     align-items: center;
     margin: auto;
   }  
@@ -28,6 +26,7 @@
     align-items:start;
     gap: 24px;
     max-width: 540px;
+    padding: 10px;
   }
 
   .our-story-image {
@@ -55,6 +54,31 @@
     z-index: 0;
 }
 
+.our-story-image .divided-baby-bowl{
+    position: absolute;
+    width: 295.35px;
+    height: 221.99px;
+    top: 360px;
+    transform: rotate(28.94deg);
+    z-index: 3;
+}
+
+.our-story-image .strawberry-icon{
+    position: absolute;
+    top: 160px;
+    left: 420px;
+    z-index: 3;
+    transform: rotate(48deg);
+
+}
+
+.our-story-image .broccoli-icon{
+    position: absolute;
+    top: 230px;
+    left: 460px;
+    z-index: 4;
+}
+
   
   
   
@@ -64,11 +88,19 @@
       height: auto;
       gap: 40px;
       margin: 60px auto;
+      justify-content: center;
+      align-items: center;
     }
   
     .our-story-inner img {
-      width: 100%;
+      width: 50%;
       height: auto;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .our-story-inner {
+      gap: 0;
     }
   }
   
