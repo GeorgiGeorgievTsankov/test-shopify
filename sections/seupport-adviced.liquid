@@ -1,0 +1,58 @@
+{{ 'support-advice-section.css' | asset_url | stylesheet_tag }}
+
+
+ 
+<div class="support-advice-wrapper">
+    <div class="support-advice-image">
+      <img src="{{ 'support-advice.png' | asset_url }}" alt="Support image" width="500" height="auto" />
+    </div>
+    <div class="support-advice-text">
+      {% for block in section.blocks %}
+        {% if block.settings.heading != blank %}
+          <h2>{{ block.settings.heading }}</h2>
+        {% endif %}
+        {% if block.settings.text != blank %}
+          <div>{{ block.settings.text }}</div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  
+  
+ {% schema %}
+ {
+    "name": "Support & Advice",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Text Block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Support & Non-Judgmental Advice"
+          },
+          {
+            "type": "textarea",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze.</p><p> We help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Support & Advice",
+        "blocks": [
+          {
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
+  
+ {% endschema %}

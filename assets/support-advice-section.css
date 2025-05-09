@@ -1,0 +1,30 @@
+.seupport-adviced-wrapper {
+    max-width: 1288px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .seupport-adviced-image {
+    flex: 1 1 100%;
+  }
+
+  .seupport-adviced-text h2 {
+    font-size: 40px;
+    line-height: 120%;
+    color: #E49AA3;
+  }
+
+
+  @media (min-width: 768px) {
+   
+  }
+
+  .seupport-adviced-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }

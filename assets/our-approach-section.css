@@ -2,8 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1268px;
+    max-width: 1288px;
     margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .our-approach-text{
