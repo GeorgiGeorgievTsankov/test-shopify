@@ -36,9 +36,9 @@
     overflow: hidden;
   }
   
-  .our-story-image img {
+  .main-image {
     position: absolute;
-    top: -170px;
+    top: -160px;
     left: auto;
     z-index: 2;
   }
@@ -46,7 +46,7 @@
  
 .foods-tracker {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     right: 0;
     width: 25%; 
     max-width: 300px;
@@ -56,8 +56,8 @@
 
 .our-story-image .divided-baby-bowl{
     position: absolute;
-    width: 295.35px;
-    height: 221.99px;
+    width: 295px;
+    height: 221px;
     top: 360px;
     transform: rotate(28.94deg);
     z-index: 2;
@@ -77,7 +77,33 @@
     top: 230px;
     left: 460px;
     z-index: 1;
+    
 }
+
+ @media (max-width: 768px) {
+  .main-image {
+    position: absolute;
+    top: 60px;
+    left: auto;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .divided-baby-bowl{
+    position: absolute;
+    max-width: 140px;
+    max-height: 105px;
+    top: 360px;
+    right: 100px;
+    transform: rotate(-6.62deg);
+    z-index: 2;
+  }
+
+  .foods-tracker {
+    display: none;
+  }
+}
+
 
   
   
@@ -90,11 +116,6 @@
       margin: 60px auto;
       justify-content: center;
       align-items: center;
-    }
-  
-    .our-story-inner img {
-      width: 50%;
-      height: auto;
     }
   }
 
