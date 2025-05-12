@@ -1,127 +1,163 @@
 .our-story-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: auto;
-  }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
 
 .our-story-section h1 {
-   color: #E49AA3;
-   font-size: 56px;
+  color: #e49aa3;
+  font-size: 56px;
 }
 
 .our-story-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 150px;
-    max-width: 1280px;
-    align-self: center;
-    align-items: center;
-    margin: auto;
-  }  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 150px;
+  max-width: 1280px;
+  align-self: center;
+  align-items: center;
+  margin: auto;
+}
 
-  .our-story-text{
-    display: flex;
-    flex-direction: column;
-    align-items:start;
-    gap: 24px;
-    max-width: 540px;
-    padding: 10px;
-  }
+.our-story-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+  max-width: 540px;
+  padding: 10px;
+}
 
-  .our-story-image {
-    position: relative;
-    max-width: 550px;
-    height: 550px;
-    overflow: hidden;
-  }
-  
-  .main-image {
-    position: absolute;
-    top: -160px;
-    left: auto;
-    z-index: 2;
-  }
+.our-story-image {
+  position: relative;
+  max-width: 550px;
+  height: 550px;
+  overflow: hidden;
+}
 
- 
+.main-image {
+  position: absolute;
+  top: -160px;
+  left: auto;
+  z-index: 2;
+}
+
 .foods-tracker {
-    position: absolute;
-    bottom: 0px;
-    right: 0;
-    width: 25%; 
-    max-width: 300px;
-    height: auto;
-    z-index: 0;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 25%;
+  max-width: 300px;
+  height: auto;
+  z-index: 0;
 }
 
-.our-story-image .divided-baby-bowl{
-    position: absolute;
-    width: 295px;
-    height: 221px;
-    top: 360px;
-    transform: rotate(28.94deg);
-    z-index: 2;
+.our-story-image .divided-baby-bowl {
+  position: absolute;
+  width: 295px;
+  height: 221px;
+  top: 360px;
+  transform: rotate(28.94deg);
+  z-index: 2;
 }
 
-.our-story-image .strawberry-icon{
-    position: absolute;
-    top: 160px;
-    left: 420px;
-    z-index: 1;
-    transform: rotate(48deg);
-
+.our-story-image .strawberry-icon {
+  position: absolute;
+  top: 160px;
+  left: 420px;
+  z-index: 1;
+  transform: rotate(48deg);
 }
 
-.our-story-image .broccoli-icon{
-    position: absolute;
-    top: 230px;
-    left: 460px;
-    z-index: 1;
-    
+.our-story-image .broccoli-icon {
+  position: absolute;
+  top: 230px;
+  left: 460px;
+  z-index: 1;
 }
 
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   .main-image {
     position: absolute;
-    top: 60px;
+    top: -80px;
     left: auto;
     z-index: 2;
     width: 100%;
   }
 
-  .divided-baby-bowl{
+  .our-story-image .divided-baby-bowl {
     position: absolute;
     max-width: 140px;
     max-height: 105px;
-    top: 360px;
-    right: 100px;
-    transform: rotate(-6.62deg);
+    top: 190px;
+    right: 60px;
+    transform: rotate(8deg);
     z-index: 2;
   }
 
   .foods-tracker {
     display: none;
   }
+
+  .our-story-inner {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .our-story-image {
+    position: relative;
+    max-width: 550px;
+    height: 290px;
+    overflow: hidden;
+  }
+
+  .our-story-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: 540px;
+    padding: 10px;
+  }
+
+  .our-story-text h1 {
+    font-size: 34px;
+    line-height: 120%;
+  }
+
+  .our-story-text p {
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .our-story-text a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .our-story-image .strawberry-icon {
+    position: absolute;
+    top: 60px;
+    left: 25px;
+    z-index: 1;
+    transform: rotate(5deg);
+  }
+
+  .our-story-image .broccoli-icon {
+    position: absolute;
+    top: 60px;
+    left: 85px;
+    z-index: 1;
+  }
 }
 
-
-  
-  
-  
-  @media (max-width: 768px) {
-    .our-story-inner {
-      grid-template-columns: 1fr;
-      height: auto;
-      gap: 40px;
-      margin: 60px auto;
-      justify-content: center;
-      align-items: center;
-    }
+@media (max-width: 1024px) {
+  .our-story-inner {
+    gap: 0;
   }
-
-  @media (max-width: 1024px) {
-    .our-story-inner {
-      gap: 0;
-    }
-  }
-  
+}
