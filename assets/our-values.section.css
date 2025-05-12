@@ -5,7 +5,6 @@
   justify-content: space-between;
   align-items: center;
   margin: 60px auto;
-  padding: 50px;
   line-height: 120%;
 }
 
@@ -37,8 +36,8 @@
 
 .saucers{
   position: absolute;
-  top: 280px;
-  right: 420px;
+  top: 230px;
+  right: 380px;
   z-index: 1;
   max-width: 100%;
   max-height: 100%;
