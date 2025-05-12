@@ -71,11 +71,29 @@
       ],
       "name": "Support & Advice",
       "settings": {}
+    },
+    "our_values_iYViNC": {
+      "type": "our-values",
+      "blocks": {
+        "text_EidHzx": {
+          "type": "text",
+          "settings": {
+            "heading": "Our Values",
+            "text": "<p>Feeding your baby is a deeply personal journey, and we encourage parents to make choices that align with their family’s lifestyle. Whether you follow BLW (baby-led weaning) or traditional weaning, we support a positive, intuitive approach to food.Our mission is to empower parents and build confident eaters, ensuring that every step of the feeding journey feels supported, informed, and enjoyable.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_EidHzx"
+      ],
+      "name": "Our-Values",
+      "settings": {}
     }
   },
   "order": [
     "our_story_4ykpez",
     "our_approach_D8BDK9",
-    "seupport_adviced_YKqQgK"
+    "seupport_adviced_YKqQgK",
+    "our_values_iYViNC"
   ]
 }
