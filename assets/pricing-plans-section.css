@@ -1,19 +1,18 @@
 .hero-section {
   position: relative;
   max-width: 100%;
-  height: 866px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 48px;
   padding: 20px;
   overflow: hidden;
-  list-style: 120%;
 }
 
 h1 {
   margin: auto;
   font-size: 56px;
+  color: #1d4653;
 }
 
 .hero-background {
@@ -21,7 +20,7 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70%;
+  height: 80%;
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -41,9 +40,9 @@ h1 {
 }
 
 .cart-box {
+  max-width: 1380px;
   display: flex;
   justify-content: space-between;
-  gap: 32px;
   flex-wrap: wrap;
 }
 
@@ -51,52 +50,88 @@ h1 {
   width: 624px;
   border: 1px solid black;
   border-radius: 30px;
-  background-color: #FFFFFF;
-  padding: 42px 80px 120px 80px;
+  background-color: #ffffff;
+  padding: 32px;
 }
 
 .card-top {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-  }
-  
-  .card-top .card-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  
-  .card-top .card-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .card-top .card-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    gap: 4px;
-  }
-  
-  .card-top .price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #e49aa3;
-  }
-  
-  .card-top .period {
-    font-size: 20px;
-    color: #555;
-  }
-  
-  .card-top .card-divider {
-    border: none;
-    border-top: 1px solid #1D4653;
-    margin: 0;
-  }
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-top {
+  font-size: 18px;
+}
+
+.card-top h3 {
+  font-size: 24px;
+  color: #e49aa3;
+  line-height: 140%;
+}
+
+.card-top p,
+.bottom-desc {
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.card-top .card-left {
+  max-width: 381px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card-top .card-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.card-top .card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.card-top .price {
+  font-size: 32px;
+  font-weight: 800;
+  color: #e49aa3;
+}
+
+.card-top .period {
+  font-size: 32px;
+  color: #1d4653;
+  font-weight: 800;
+  line-height: 120%;
+}
+
+.card-divider {
+  border: none;
+  border-top: 1px solid #1d4653;
+  margin: 16px 0 16px 0;
+}
+
+/* -------------check------------ */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.check-mark {
+  color: #39a487;
+  font-size: 16px;
+}
 
 @media (max-width: 768px) {
   .cart-box {

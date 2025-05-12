@@ -30,10 +30,10 @@
                         <div class="card-bottom">
                           <p class="bottom-desc">{{ block.settings.bottom_text }}</p>
                           <ul class="feature-list">
-                            <li>{{ block.settings.feature_1 }}</li>
-                            <li>{{ block.settings.feature_2 }}</li>
-                            <li>{{ block.settings.feature_3 }}</li>
-                            <li>{{ block.settings.feature_4 }}</li>
+                            <li><span class="check-mark">✔️</span>{{ block.settings.feature_1 }}</li>
+                            <li><span class="check-mark">✔️</span>{{ block.settings.feature_2 }}</li>
+                            <li><span class="check-mark">✔️</span>{{ block.settings.feature_3 }}</li>
+                            <li><span class="check-mark">✔️</span>{{ block.settings.feature_4 }}</li>
                           </ul>
                           <a href="{{ block.settings.button_link }}" class="card-button">{{ block.settings.button_label }}</a>
                         </div>
@@ -103,7 +103,7 @@
           "type": "text",
           "id": "price",
           "label": "Price",
-          "default": "$9.99"
+          "default": "<p>$9.99</p>"
         },
         {
           "type": "text",
