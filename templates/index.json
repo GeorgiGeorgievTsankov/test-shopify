@@ -88,12 +88,47 @@
       ],
       "name": "Our-Values",
       "settings": {}
+    },
+    "pricing_plans_XheYxF": {
+      "type": "pricing-plans",
+      "blocks": {
+        "heading_tQdfy3": {
+          "type": "heading",
+          "settings": {
+            "title": "Introduce pricing plans"
+          }
+        },
+        "pricing_card_gMeyaU": {
+          "type": "pricing_card",
+          "settings": {
+            "icon": "shopify://shop_images/monthly-icon.png",
+            "title": "Starting Solids Monthly Membership",
+            "description": "Our members only program designed to help you make the transition to solid foods stress free.",
+            "price": "$9.99",
+            "period": "mo",
+            "bottom_text": "Monthly Membership Subscription- Support for your entire solids journey!",
+            "feature_1": "First Foods Online Course",
+            "feature_2": "First Food Guide & Recipe Book",
+            "feature_3": "Unlock our entire Recipe and Information Library",
+            "feature_4": "Personalized Support – Exclusive forum and facebook groups!",
+            "button_label": "Choose Plan",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_tQdfy3",
+        "pricing_card_gMeyaU"
+      ],
+      "name": "Pricing Plans",
+      "settings": {}
     }
   },
   "order": [
     "our_story_4ykpez",
     "our_approach_D8BDK9",
     "seupport_adviced_YKqQgK",
-    "our_values_iYViNC"
+    "our_values_iYViNC",
+    "pricing_plans_XheYxF"
   ]
 }

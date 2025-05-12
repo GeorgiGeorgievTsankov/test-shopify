@@ -9,70 +9,161 @@
             {% case block.type %}
               {% when 'heading' %}
                 <h1>{{ block.settings.title }}</h1>
-              {% when 'left_column_text' %}
-                <div class="column-box"><p>{{ block.settings.text }}</p></div>
-              {% when 'right_column_text' %}
-                <div class="column-box"><p>{{ block.settings.text }}</p></div>
+              {% when 'pricing_card' %}
+                <div class="cart-box">
+                    <div class="column-box">
+                        <!-- Top section -->
+                        <div class="card-top">
+                          <div class="card-left">
+                            <img src="{{ block.settings.icon | image_url }}" alt="Icon" class="card-icon" />
+                            <h3>{{ block.settings.title }}</h3>
+                            <p>{{ block.settings.description }}</p>
+                          </div>
+                          <div class="card-right">
+                            <p class="price">{{ block.settings.price }}</p>
+                            <p class="period">{{ block.settings.period }}</p>
+                          </div>
+                        </div>
+
+                        <hr class="card-divider" />
+              
+                        <div class="card-bottom">
+                          <p class="bottom-desc">{{ block.settings.bottom_text }}</p>
+                          <ul class="feature-list">
+                            <li>{{ block.settings.feature_1 }}</li>
+                            <li>{{ block.settings.feature_2 }}</li>
+                            <li>{{ block.settings.feature_3 }}</li>
+                            <li>{{ block.settings.feature_4 }}</li>
+                          </ul>
+                          <a href="{{ block.settings.button_link }}" class="card-button">{{ block.settings.button_label }}</a>
+                        </div>
+                      </div>
+                </div>
             {% endcase %}
+        
           {% endfor %}
     </div>
 </div>
   
   
 
-  {% schema %}
-  {
-    "name": "Pricing Plans",
-    "tag": "section",
-    "settings": [],
-    "blocks": [
-      {
-        "type": "heading",
-        "name": "Heading",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title",
-            "default": "Introduce pricing plans"
-          }
-        ]
-      },
-      {
-        "type": "left_column_text",
-        "name": "Left Column Text",
-        "settings": [
-          {
-            "type": "textarea",
-            "id": "text",
-            "label": "Left Text",
-            "default": "Do you want to make"
-          }
-        ]
-      },
-      {
-        "type": "right_column_text",
-        "name": "Right Column Text",
-        "settings": [
-          {
-            "type": "textarea",
-            "id": "text",
-            "label": "Right Text",
-            "default": "We help you "
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Pricing Plans",
-        "blocks": [
-          { "type": "heading" },
-          { "type": "left_column_text" },
-          { "type": "right_column_text" }
-        ]
-      }
-    ]
-  }
-  {% endschema %}
-  
+{% schema %}
+{
+  "name": "Pricing Plans",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Introduce pricing plans"
+        }
+      ]
+    },
+    {
+      "type": "column_box",
+      "name": "Column Text",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Do you want to make"
+        }
+      ]
+    },
+    
+    {
+      "type": "pricing_card",
+      "name": "Pricing Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Starting Solids Monthly Membership"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Short Description",
+          "default": "Our members only program designed to help you make the transition to solid foods stress free."
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$9.99"
+        },
+        {
+          "type": "text",
+          "id": "period",
+          "label": "Billing Period",
+          "default": "mo"
+        },
+        {
+          "type": "textarea",
+          "id": "bottom_text",
+          "label": "Bottom Description",
+          "default": "Monthly Membership Subscription- Support for your entire solids journey!"
+        },
+        {
+          "type": "text",
+          "id": "feature_1",
+          "label": "Feature 1",
+          "default": "First Foods Online Course"
+        },
+        {
+          "type": "text",
+          "id": "feature_2",
+          "label": "Feature 2",
+          "default": "First Food Guide & Recipe Book"
+        },
+        {
+          "type": "text",
+          "id": "feature_3",
+          "label": "Feature 3",
+          "default": "Unlock our entire Recipe and Information Library"
+        },
+        {
+          "type": "text",
+          "id": "feature_4",
+          "label": "Feature 4",
+          "default": "Personalized Support – Exclusive forum and facebook groups!"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label",
+          "default": "Choose Plan"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link",
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pricing Plans",
+      "blocks": [
+        { "type": "heading" },
+        { "type": "column_box" },
+        { "type": "pricing_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
