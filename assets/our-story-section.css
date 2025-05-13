@@ -15,7 +15,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 150px;
-  max-width: 1280px;
   align-self: center;
   align-items: center;
   margin: auto;
@@ -28,6 +27,14 @@
   gap: 24px;
   max-width: 540px;
   padding: 10px;
+}
+
+.our-story-text p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0;
+  vertical-align: middle;
 }
 
 .our-story-image {

@@ -47,11 +47,14 @@
 }
 
 .column-box {
+  display: flex;
+  flex-direction: column;
   width: 624px;
   border: 1px solid black;
   border-radius: 30px;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 32px;
+  gap: 32px;
 }
 
 .card-top {
