@@ -1,4 +1,4 @@
-.hero-section {
+.hero-section-pricing-plans {
   position: relative;
   max-width: 100%;
   margin: 0 auto;
@@ -9,7 +9,7 @@
   overflow: hidden;
 }
 
-h1 {
+.hero-section-pricing-plans h1 {
   margin: auto;
   font-size: 56px;
   color: #1d4653;
