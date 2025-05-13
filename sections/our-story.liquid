@@ -1,12 +1,23 @@
 {{ 'our-story-section.css' | asset_url | stylesheet_tag }}
 
 {% style %}
-  .our-story-section {
-    background-color: {{ section.settings.background_color }};
-  }
+
+  #shopify-section-{{ section.id }} .our-story-section {
+        background-image: url('{{ section.settings.background_image_desktop | img_url: "1920x" }}');
+    }
+
+    .home-hero-overlay {
+        opacity: {{ section.settings.background_overlay_opacity | divided_by: 100.0 }};
+    }
+
+    @media only screen and (max-width: 768px) {
+        #shopify-section-{{ section.id }} .our-story-section {
+            background-image: url("{{ section.settings.background_image_mobile | image_url: "768px" }}");
+        }
+    }
 {% endstyle %}
 
-<div class="our-story-section  ">
+<div class="our-story-section">
     <div class="our-story-inner container-large">
       <div class="our-story-text">
         {% for block in section.blocks %}
@@ -24,14 +35,7 @@
             {% endcase %}
         {% endfor %}
       </div>
-      <div class="our-story-image"> 
-        <img class="main-image" src="{{ images['strawberry-woman.png'] | image_url: width: 800 }}" alt="Our story image" width="700" height="auto" />  
-        <img class="divided-baby-bowl" src="{{ images['divided-baby-bowl.png'] | image_url: width: 800 }}" alt="Our story image" width="200" height="auto" />
-        <img class="strawberry-icon" src="{{ images['strawberry-icon.png'] | image_url: width: 800 }}" alt="strawberry" width="82" height="auto" />
-        <img class="broccoli-icon" src="{{ images['broccoli-icon.png'] | image_url: width: 800 }}" alt="broccoli image" width="40" height="auto" />
-      </div>
     </div>
-    <img class="foods-tracker" src="{{ images['foods-tracker.png'] | image_url: width: 800 }}" alt="foods-tracker image" width="80" height="auto" />
   </div>
   
 
@@ -40,10 +44,14 @@
   "name": "Our Story",
   "settings": [
     {
-      "type": "color",
-      "id": "background_color",
-      "label": "Background Color",
-      "default": "#F8E3E4"
+      "type": "image_picker",
+      "id": "background_image_desktop",
+      "label": "Background Image (Desktop)"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Background Image (Mobile)"
     }
   ],
   "blocks": [

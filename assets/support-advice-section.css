@@ -27,12 +27,12 @@
   gap: 16px;
 }
 
-.text-content{
+.text-content {
   max-width: 527px;
   margin-bottom: 16px;
 }
 
-.text-content p{
+.text-content p {
   margin-bottom: 14px;
 }
 
@@ -45,13 +45,17 @@
     flex-direction: column-reverse;
   }
 
+  .support-advice-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 527px;
+    gap: 16px;
+  }
+
   .support-advice-image img {
     max-width: 358px;
     margin: auto;
-  }
-
-  .support-advice-text {
-    gap: 16px;
   }
 
   .img-desktop {
