@@ -46,3 +46,12 @@
     padding: 10px;
   }
 }
+
+@media (min-width: 763px) and (max-width: 1024px) {
+  .our-approach-image img {
+    max-width: 453px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+

@@ -35,7 +35,8 @@
       ],
       "name": "Our Story Default",
       "settings": {
-        "background_color": "#f8e3e4"
+        "background_image_desktop": "shopify://shop_images/our-story-group.png",
+        "background_image_mobile": "shopify://shop_images/hero-background.png"
       }
     },
     "our_approach_D8BDK9": {

@@ -38,29 +38,16 @@
   vertical-align: middle;
 }
 
-
+.our-story-image {
+  display: none;
+}
 
 @media (max-width: 768px) {
-  .main-image {
-    position: absolute;
-    top: -80px;
-    left: auto;
-    z-index: 2;
+  .our-story-image {
     width: 100%;
-  }
-
-  .our-story-image .divided-baby-bowl {
-    position: absolute;
-    max-width: 140px;
-    max-height: 105px;
-    top: 190px;
-    right: 60px;
-    transform: rotate(8deg);
-    z-index: 2;
-  }
-
-  .foods-tracker {
-    display: none;
+    height: auto;
+    display: flex;
+    justify-content: center;
   }
 
   .our-story-inner {
@@ -69,13 +56,6 @@
     gap: 40px;
     justify-content: center;
     align-items: center;
-  }
-
-  .our-story-image {
-    position: relative;
-    max-width: 550px;
-    max-height: 290px;
-    overflow: hidden;
   }
 
   .our-story-text {
@@ -102,25 +82,6 @@
     width: 100%;
     text-align: center;
   }
-
-  .our-story-image .strawberry-icon {
-    position: absolute;
-    top: 60px;
-    left: 25px;
-    z-index: 1;
-    transform: rotate(5deg);
-  }
-
-  .our-story-image .broccoli-icon {
-    position: absolute;
-    top: 60px;
-    left: 85px;
-    z-index: 1;
-  }
 }
 
-@media (max-width: 1024px) {
-  .our-story-inner {
-    gap: 0;
-  }
-}
+
