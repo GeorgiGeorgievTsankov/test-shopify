@@ -17,6 +17,12 @@
   max-width: 527px;
 }
 
+.our-approach-text p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+}
+
 .our-approach-text h2 {
   font-size: 40px;
   line-height: 120%;
@@ -44,6 +50,11 @@
     max-width: 353px;
     margin: 0 auto;
     padding: 10px;
+  }
+
+
+  .our-approach-text p {
+    font-size: 14px;
   }
 }
 
