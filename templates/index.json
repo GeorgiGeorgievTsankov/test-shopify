@@ -9,127 +9,15 @@
  */
 {
   "sections": {
-    "our_story_4ykpez": {
-      "type": "our-story",
-      "blocks": {
-        "text_6EzpVw": {
-          "type": "text",
-          "settings": {
-            "heading": "Our Story",
-            "text": "<p>Welcome to Starting Solids Australia! I'm Jeanette, Accredited Practicing Dietitian, mum of 3, and the proud founder of this beautiful community. After witnessing the confusion many new parents face due to misinformation on social media, I created a safe haven—a place where families can turn for trustworthy, compassionate  advice.Our team of health professionals is dedicated to making the transition to solids easier, offering educational resources and thoughtfully designed feeding products to support every family’s unique need</p>"
-          }
-        },
-        "button_fhmka6": {
-          "type": "button",
-          "settings": {
-            "label_button": "Browse library",
-            "secondary_button_link": "",
-            "button_color": "#39a487",
-            "text_color": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "text_6EzpVw",
-        "button_fhmka6"
-      ],
-      "name": "Our Story Default",
+    "main_custom_page_XBHqGJ": {
+      "type": "main-custom-page",
+      "name": "Popular Recipes",
       "settings": {
-        "background_image_desktop": "shopify://shop_images/our-story-group.png",
-        "background_image_mobile": "shopify://shop_images/hero-background.png"
+        "heading": "Welcome to Popular Recipes"
       }
-    },
-    "our_approach_D8BDK9": {
-      "type": "our-approach",
-      "blocks": {
-        "text_aLkKx6": {
-          "type": "text",
-          "settings": {
-            "heading": "Our Approach",
-            "text": "<p>Our ApproachWe believe there is no one-size-fits-all approach to feeding babies. Every child is different, and we support parents in finding the best way to wean their baby with confidence.\nBy encouraging responsive feeding methods, we help families create a joyful and healthy relationship with food, fostering positive connections and long-term healthy habits.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_aLkKx6"
-      ],
-      "name": "Our-Approach",
-      "settings": {}
-    },
-    "seupport_adviced_YKqQgK": {
-      "type": "seupport-adviced",
-      "blocks": {
-        "text_ggmzfY": {
-          "type": "text",
-          "settings": {
-            "heading": "Support & Non-Judgmental Advice",
-            "text": "<p>Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze.</p><p> We help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_ggmzfY"
-      ],
-      "name": "Support & Advice",
-      "settings": {}
-    },
-    "our_values_iYViNC": {
-      "type": "our-values",
-      "blocks": {
-        "text_EidHzx": {
-          "type": "text",
-          "settings": {
-            "heading": "Our Values",
-            "text": "<p>Feeding your baby is a deeply personal journey, and we encourage parents to make choices that align with their family’s lifestyle. Whether you follow BLW (baby-led weaning) or traditional weaning, we support a positive, intuitive approach to food.Our mission is to empower parents and build confident eaters, ensuring that every step of the feeding journey feels supported, informed, and enjoyable.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_EidHzx"
-      ],
-      "name": "Our-Values",
-      "settings": {}
-    },
-    "pricing_plans_XheYxF": {
-      "type": "pricing-plans",
-      "blocks": {
-        "heading_tQdfy3": {
-          "type": "heading",
-          "settings": {
-            "title": "Introduce pricing plans"
-          }
-        },
-        "pricing_card_gMeyaU": {
-          "type": "pricing_card",
-          "settings": {
-            "icon": "shopify://shop_images/monthly-icon.png",
-            "title": "Starting Solids Monthly Membership",
-            "description": "Our members only program designed to help you make the transition to solid foods stress free.",
-            "price": "$9.99",
-            "period": "mo",
-            "bottom_text": "Monthly Membership Subscription- Support for your entire solids journey!",
-            "feature_1": "First Foods Online Course",
-            "feature_2": "First Food Guide & Recipe Book",
-            "feature_3": "Unlock our entire Recipe and Information Library",
-            "feature_4": "Personalized Support – Exclusive forum and facebook groups!",
-            "button_label": "Choose Plan",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_tQdfy3",
-        "pricing_card_gMeyaU"
-      ],
-      "name": "Pricing Plans",
-      "settings": {}
     }
   },
   "order": [
-    "our_story_4ykpez",
-    "our_approach_D8BDK9",
-    "seupport_adviced_YKqQgK",
-    "our_values_iYViNC",
-    "pricing_plans_XheYxF"
+    "main_custom_page_XBHqGJ"
   ]
 }

@@ -3,56 +3,82 @@
 
 
 <div class="hero-section-pricing-plans">
-    <img class="hero-background" src="{{ images['hero-background.png'] | image_url }}" alt="hero-background" width="800" height="auto" />
-    <div class="content-wrapper">
-        {% for block in section.blocks %}
-            {% case block.type %}
-              {% when 'heading' %}
-                <h1>{{ block.settings.title }}</h1>
-              {% when 'pricing_card' %}
-                <div class="cart-box">
-                    <div class="column-box">
-                        <!-- Top section -->
-                        <div class="card-top">
-                          <div class="card-left">
-                            <img src="{{ block.settings.icon | image_url }}" alt="Icon" class="card-icon" />
-                            <h3>{{ block.settings.title }}</h3>
-                            <p>{{ block.settings.description }}</p>
-                          </div>
-                          <div class="card-right">
-                            <p class="price">{{ block.settings.price }}</p>
-                            <p class="period">{{ block.settings.period }}</p>
-                          </div>
-                        </div>
-
-                        <hr class="card-divider" />
-              
-                        <div class="card-bottom">
-                          <p class="bottom-desc">{{ block.settings.bottom_text }}</p>
-                          <ul class="feature-list">
-                            <li><span class="check-mark">✔️</span>{{ block.settings.feature_1 }}</li>
-                            <li><span class="check-mark">✔️</span>{{ block.settings.feature_2 }}</li>
-                            <li><span class="check-mark">✔️</span>{{ block.settings.feature_3 }}</li>
-                            <li><span class="check-mark">✔️</span>{{ block.settings.feature_4 }}</li>
-                          </ul>
-                          <a href="{{ block.settings.button_link }}" class="card-button">{{ block.settings.button_label }}</a>
-                        </div>
-                      </div>
-                </div>
-            {% endcase %}
-        
-          {% endfor %}
-    </div>
-</div>
+  <img class="hero-background" src="{{ images['hero-background.png'] | image_url }}" alt="hero-background" width="800" height="auto" />
   
+  <div class="content-wrapper">
+    {% for block in section.blocks %}
+      {% if block.type == 'heading' %}
+        <h1>{{ block.settings.title }}</h1>
+      {% endif %}
+    {% endfor %}
+
+    <div class="carts-wrapper">
+      {% for block in section.blocks %}
+        {% if block.type == 'pricing_card' %}
+          <div class="cart-box">
+            <div class="column-box">
+              <!-- Top section -->
+              <div class="card-top">
+                <div class="card-left">
+                  <img src="{{ block.settings.icon | img_url }}" width="40px" alt="Icon" class="card-icon" />
+                  <h3>{{ block.settings.title }}</h3>
+                  <p>{{ block.settings.description }}</p>
+                </div>
+                <div class="card-right">
+                  <p class="price">{{ block.settings.price }}</p>
+                  <p class="period">{{ block.settings.period }}</p>
+                </div>
+              </div>
+
+              <hr class="card-divider" />
+
+              <div class="card-bottom">
+                <p class="bottom-desc">{{ block.settings.bottom_text }}</p>
+                <ul class="feature-list">
+                  <li><span class="check-mark">✔️ </span>{{ block.settings.feature_1 }}</li>
+                  <li><span class="check-mark">✔️ </span>{{ block.settings.feature_2 }}</li>
+                  <li><span class="check-mark">✔️ </span>{{ block.settings.feature_3 }}</li>
+                  <li><span class="check-mark">✔️ </span>{{ block.settings.feature_4 }}</li>
+                </ul>
+                {% render 'secondary-button',
+                  text: block.settings.button_label,
+                  link: block.settings.button_link,
+                  bg_color: block.settings.button_color,
+                  text_color: block.settings.text_color,
+                  class: 'custom-size-button',
+                %}
+                
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+
   
 
 {% schema %}
 {
   "name": "Pricing Plans",
   "tag": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Join Now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
   "blocks": [
+   
     {
       "type": "heading",
       "name": "Heading",
@@ -77,7 +103,6 @@
         }
       ]
     },
-    
     {
       "type": "pricing_card",
       "name": "Pricing Card",
@@ -103,7 +128,7 @@
           "type": "text",
           "id": "price",
           "label": "Price",
-          "default": "<p>$9.99</p>"
+          "default": "$9.99"
         },
         {
           "type": "text",
@@ -145,12 +170,24 @@
           "type": "text",
           "id": "button_label",
           "label": "Button Label",
-          "default": "Choose Plan"
+          "default": "Add to cart"
         },
         {
           "type": "url",
           "id": "button_link",
-          "label": "Button Link",
+          "label": "Button Link"
+        },
+        {
+          "type": "color",
+          "id": "button_color",
+          "label": "Button Background Color",
+          "default": "#F8E3E4"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Button Text Color",
+          "default": "#E49AA3"
         }
       ]
     }

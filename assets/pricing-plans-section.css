@@ -13,6 +13,9 @@
   margin: auto;
   font-size: 56px;
   color: #1d4653;
+  line-height: 120%;
+  font-weight: 800;
+  text-align: center;
 }
 
 .hero-background {
@@ -35,6 +38,13 @@
   gap: 32px;
 }
 
+.carts-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
 .heading-container {
   text-align: center;
 }
@@ -49,12 +59,21 @@
 .column-box {
   display: flex;
   flex-direction: column;
-  width: 624px;
+  max-width: 624px;
+  min-width: 358px;
   border: 1px solid black;
   border-radius: 30px;
   background-color: #fff;
   padding: 32px;
   gap: 32px;
+}
+
+.column-box p,
+.column-box li {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #1d4653;
 }
 
 .card-top {
@@ -63,9 +82,6 @@
   gap: 16px;
 }
 
-.card-top {
-  font-size: 18px;
-}
 
 .card-top h3 {
   font-size: 24px;
@@ -77,6 +93,7 @@
 .bottom-desc {
   font-weight: 400;
   line-height: 120%;
+  font-size: 18px;
 }
 
 .card-top .card-left {
@@ -136,6 +153,11 @@
   font-size: 16px;
 }
 
+/* ------------------button---------- */
+.secondary-button.custom-size-button {
+  width: 100% !important;
+}
+
 @media (max-width: 768px) {
   .cart-box {
     flex-direction: column;
@@ -143,6 +165,71 @@
   }
 
   .column-box {
-    max-width: 100%;
+    max-width: 358px;
+    padding: 15px;
+    gap: 12px;
   }
+
+  .column-box p,
+  .column-box li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #1d4653;
+  }
+
+  .hero-section-pricing-plans h1 {
+    margin: auto;
+    font-size: 36px;
+    color: #1d4653;
+  }
+
+
+  @media (max-width: 768px) {
+    .card-top {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .card-left {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+  
+    .card-left img {
+      width: 32px;
+      height: auto;
+    }
+  
+    .card-right {
+      align-items: flex-end;
+    }
+  
+    .card-left h3,
+    .card-left p {
+      width: 100%;
+    }
+  
+    .card-left h3 {
+      font-size: 18px;
+      margin-top: 8px;
+    }
+  
+    .card-left p {
+      font-size: 14px;
+    }
+  
+    .card-right .price {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  
+    .card-right .period {
+      font-size: 14px;
+      color: #999;
+    }
+  }
+  
 }
