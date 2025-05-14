@@ -9,27 +9,15 @@
  */
 {
   "sections": {
-<<<<<<< HEAD
-    "main_custom_page_XBHqGJ": {
-      "type": "main-custom-page",
-      "name": "Popular Recipes",
+    "main": {
+      "type": "main-page",
       "settings": {
-        "heading": "Welcome to Popular Recipes"
+        "padding_top": 28,
+        "padding_bottom": 28
       }
     }
   },
   "order": [
-    "main_custom_page_XBHqGJ"
-=======
-    "pricing_plans_XheYxF": {
-      "type": "pricing-plans",
-      "disabled": true,
-      "name": "Pricing Plans",
-      "settings": {}
-    }
-  },
-  "order": [
-    "pricing_plans_XheYxF"
->>>>>>> 70b7505457b4627ae4b159988785d64ad9e9b10f
+    "main"
   ]
 }
