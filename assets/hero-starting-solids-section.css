@@ -1,74 +1,83 @@
 .starting-solids-hero-section {
-    display: flex;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 698px;
-  }
-  
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 690px;
+  margin-bottom: 60px;
+}
+.starting-solids-inner {
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: auto;
+}
+
+.starting-solids-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+  max-width: 700px;
+  padding: 10px;
+}
+
+.starting-solids-inner .starting-solids-box h1 {
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 120%;
+  color: #ffffff;
+}
+
+.text-1 {
+  max-width: 568px;
+}
+.starting-solids-box p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
   .starting-solids-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 150px;
+    max-width: 358px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    justify-content: center;
     align-items: center;
-    margin: auto;
+    width: 100%;
+    margin-top: 0;
   }
-  
-  .starting-solids-text {
+
+  .starting-solids-box {
+    align-items: center;
+    text-align: center; 
+    padding: 20px 15px 15px;
+    order: -1;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 24px;
-    max-width: 540px;
-    padding: 10px;
+    align-items: center; 
+  }
+
+  .starting-solids-inner .starting-solids-box h1 {
+    font-size: 36px;
+    text-align: center; 
+  }
+
+  .starting-solids-box p {
+    font-size: 14px;
+    text-align: center;
   }
   
-  .starting-solids-text h1 {
-    font-family: Agrandir;
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 120%;
-    color: #e49aa3;
+  .starting-solids-box .button,
+  .starting-solids-box a.button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
-  
-  .starting-solids-text p {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 140%;
-  }
-  
-  .starting-solids-image {
-    display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .starting-solids-inner {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .starting-solids-text {
-      align-items: center;
-      padding: 20px 15px 15px;
-    }
-  
-    .starting-solids-text h1 {
-      font-size: 34px;
-      line-height: 120%;
-      text-align: center;
-    }
-  
-    .starting-solids-text p {
-      font-size: 14px;
-      text-align: center;
-    }
-  
-    .starting-solids-image {
-      display: flex;
-      justify-content: center;
-    }
-  }
-  
+}

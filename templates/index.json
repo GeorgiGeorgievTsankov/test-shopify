@@ -9,6 +9,36 @@
  */
 {
   "sections": {
+    "hero_starting_solids_j9zxbW": {
+      "type": "hero-starting-solids",
+      "blocks": {
+        "text_VGLemU": {
+          "type": "text",
+          "settings": {
+            "heading": "Starting Solids Library.",
+            "text": "Browse our library of information and recipes to guide you through getting started on solids. Some of our library is free or you can unlock the entire library by purchasing a subscription and  supporting us to grow the library."
+          }
+        },
+        "button_dkFYbY": {
+          "type": "button",
+          "settings": {
+            "label_button": "Browse library",
+            "secondary_button_link": "",
+            "button_color": "#e49aa3",
+            "text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "text_VGLemU",
+        "button_dkFYbY"
+      ],
+      "name": "Starting Solids Hero",
+      "settings": {
+        "background_image_desktop": "shopify://shop_images/our-story-group.png",
+        "background_image_mobile": "shopify://shop_images/hero-background.png"
+      }
+    },
     "recipes_dhpdfC": {
       "type": "recipes",
       "blocks": {
@@ -30,6 +60,7 @@
     }
   },
   "order": [
+    "hero_starting_solids_j9zxbW",
     "recipes_dhpdfC"
   ]
 }

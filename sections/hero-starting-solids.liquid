@@ -1,13 +1,30 @@
-{{ hero-starting-solids-section.css | asset_url | stylesheet_tag }}
+{{ 'hero-starting-solids-section.css' | asset_url | stylesheet_tag }}
 
-<div class="starting-solids-hero-section padding-global ">
-    <div class="starting-solids-inner container-large">
-      <div class="starting-solids-text">
+
+{% style %}
+  #shopify-section-{{ section.id }} .starting-solids-hero-section {
+      background-image: url('{{ section.settings.background_image_desktop | img_url: "2048x" }}');
+  }
+
+  @media only screen and (max-width: 768px) {
+      #shopify-section-{{ section.id }} .starting-solids-hero-section {
+          background-image: url('{{ section.settings.background_image_mobile | img_url: "2048x" }}');
+      }
+  }  
+
+{% endstyle %}
+
+
+
+
+<div class="starting-solids-hero-section">
+    <div class="starting-solids-inner content-large">
+      <div class="starting-solids-box">
         {% for block in section.blocks %}
           {% case block.type %}
             {% when 'text' %}
               <h1>{{ block.settings.heading }}</h1>
-              <div>{{ block.settings.text }}</div>
+              <div class="text-1">{{ block.settings.text }}</div>
             {% when 'button' %}
               {% render 'secondary-button',
                 text: block.settings.label_button,
@@ -17,9 +34,6 @@
               %}
           {% endcase %}
         {% endfor %}
-      </div>
-      <div class="starting-solids-image">
-        <img src="{{ images['baby-hero.png'] | image_url }}" alt="Baby Hero Image"  />
       </div>
     </div>
   </div>
