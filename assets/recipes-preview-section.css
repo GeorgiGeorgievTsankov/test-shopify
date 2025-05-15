@@ -1,6 +1,6 @@
 .recipes-preview-wrapper {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -8,7 +8,6 @@
 }
 
 .recipes-preview-wrapper h2 {
-  font-family: "Agrandir", sans-serif;
   font-weight: 800;
   font-size: 40px;
   line-height: 48px;
@@ -48,15 +47,21 @@
 
 .recipes-grid {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: visible;
+}
+
+.recipes-grid a {
+  text-decoration: none;
 }
 
 .recipe-card {
+  flex: 0 0 auto;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  max-width: 400px;
   border-radius: 20px;
   gap: 24px;
 }
@@ -79,4 +84,54 @@
   height: 420px;
   border-radius: 20px;
   object-fit: cover;
+}
+
+.mobile-view-all {
+  display: none;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.mobile-view-all a {
+  text-decoration: none;
+  font-weight: 800;
+  color: #39a487;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+@media (max-width: 768px) {
+  .recipes-grid {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px;
+  }
+
+  .recipe-card {
+    scroll-snap-align: start;
+    max-width: 310px;
+    gap: 12px;
+  }
+
+  .top-container .right {
+    display: none;
+  }
+
+  .mobile-view-all {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .recipes-preview-wrapper h2 {
+    font-size: 28px;
+    line-height: 130%;
+  }
+  
+  .recipes-preview-wrapper p {
+    font-size: 14px;
+  }
+  
 }

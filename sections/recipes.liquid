@@ -1,6 +1,6 @@
 {{ 'recipes-preview-section.css' | asset_url | stylesheet_tag }}
 
-<div class="recipes-preview-wrapper">
+<div class="recipes-preview-wrapper padding-global">
 
   <div class="top-container">
     <div class="left">
@@ -18,16 +18,19 @@
 
   <div class="recipes-grid">
     {% for article in blogs['recipes-1'].articles limit: 3 %}
-        <div class="recipe-card">
+        <a href="{{ article.url }}" class="recipe-card">
           <div class="recipe-card-image-wrapper">
             {% if article.image %}
               <img src="{{ article.image | image_url: width: 800 }}" alt="{{ article.title }}" width="400" height="auto" />
-              
             {% endif %}
           </div>
           <p>{{ article.title }}</p>
-        </div>
+        </a>
       {% endfor %}      
+  </div>
+
+  <div class="mobile-view-all">
+    <a href="{{ section.settings.browse_link }}">View all recipes &gt;</a>
   </div>
 </div>
 
