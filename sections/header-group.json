@@ -49,21 +49,10 @@
         "padding_top": 8,
         "padding_bottom": 8
       }
-    },
-    "custom_section_Wq8MKx": {
-      "type": "custom-section",
-      "name": "Custom section",
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "title": "Custom Section Title",
-        "description": "<p>Custom section description</p>"
-      }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "custom_section_Wq8MKx"
+    "header"
   ]
 }

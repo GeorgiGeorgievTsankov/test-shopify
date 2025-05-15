@@ -1,0 +1,79 @@
+{{ 'recipes-preview-section.css' | asset_url | stylesheet_tag }}
+
+<div class="recipes-preview-wrapper">
+
+  <div class="top-container">
+    <div class="left">
+      {% for block in section.blocks %}
+        {% if block.type == 'heading' %}
+          <h2>{{ block.settings.heading }}</h2>
+          <p>{{ block.settings.text }}</p>
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="right">
+      <a href="{{ section.settings.browse_link }}">View all recipes &gt;</a>
+    </div>
+  </div>
+
+  <div class="recipes-grid">
+    {% for article in blogs['recipes-1'].articles limit: 3 %}
+        <div class="recipe-card">
+          <div class="recipe-card-image-wrapper">
+            {% if article.image %}
+              <img src="{{ article.image | image_url: width: 800 }}" alt="{{ article.title }}" width="400" height="auto" />
+              
+            {% endif %}
+          </div>
+          <p>{{ article.title }}</p>
+        </div>
+      {% endfor %}      
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Recipes Preview",
+  "max_blocks": 2,
+  "settings":  [
+    {
+        "type": "url",
+        "id": "browse_link",
+        "label": "Browse Link"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Popular Recipes"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Created for your little ones, by our Accredited Practicing Dietitian's (& Mums)."
+        }
+      ]
+    }
+  ],
+  "presets": [
+   {
+      "name": "Popular Recipes",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "heading",
+        }
+      ]
+   }
+  ]
+}
+{% endschema %}

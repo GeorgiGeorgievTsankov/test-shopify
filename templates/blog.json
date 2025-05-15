@@ -11,6 +11,7 @@
   "sections": {
     "main": {
       "type": "main-blog",
+      "disabled": true,
       "settings": {
         "layout": "grid",
         "show_image": true,
@@ -21,16 +22,28 @@
         "padding_bottom": 36
       }
     },
-    "main_custom_page_DLfUhD": {
-      "type": "main-custom-page",
+    "recipes_XngYwD": {
+      "type": "recipes",
+      "blocks": {
+        "heading_6b8JGi": {
+          "type": "heading",
+          "settings": {
+            "heading": "Popular Recipes",
+            "text": "Created for your little ones, by our Accredited Practicing Dietitian's (& Mums)."
+          }
+        }
+      },
+      "block_order": [
+        "heading_6b8JGi"
+      ],
       "name": "Popular Recipes",
       "settings": {
-        "heading": "Welcome to Popular Recipes"
+        "browse_link": ""
       }
     }
   },
   "order": [
     "main",
-    "main_custom_page_DLfUhD"
+    "recipes_XngYwD"
   ]
 }
