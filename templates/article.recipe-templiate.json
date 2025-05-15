@@ -9,19 +9,18 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "main-article",
-      "disabled": true,
-      "settings": {}
-    },
-    "recipe_article_iXdQ6p": {
+    "recipe_article_RfbnRc": {
       "type": "recipe-article",
       "name": "Recipe Article",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-article",
       "settings": {}
     }
   },
   "order": [
-    "main",
-    "recipe_article_iXdQ6p"
+    "recipe_article_RfbnRc",
+    "main"
   ]
 }

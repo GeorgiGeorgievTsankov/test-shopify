@@ -1,0 +1,142 @@
+{{ 'recipe-article-section.css' | asset_url | stylesheet_tag }}
+
+<section class="recipe-detail-container">
+  <!-- Header section with title and short description -->
+  <div class="recipe-header">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'title' %}
+          <h1 class="recipe-title">{{ block.settings.text }}</h1>
+        {% when 'description' %}
+          <p class="recipe-short-description">{{ block.settings.text }}</p>
+      {% endcase %}
+    {% endfor %}
+  </div>
+
+  <!-- Main content area -->
+  <div class="recipe-main-content">
+    <!-- Left side: image, extra recipes, social share -->
+    <div class="recipe-left">
+      {% if article.image %}
+        <img class="main-recipe-image" src="{{ article.image | img_url: '800x' }}" alt="{{ article.title }}">
+      {% endif %}
+
+      <div class="related-recipes">
+        {% assign more_recipes = blogs['recipes-1'].articles | where: "id", article.id | limit: 2 %}
+        <h3>More Recipes</h3>
+        <ul>
+          {% for recipe in blogs['recipes-1'].articles limit: 2 %}
+            {% if recipe.id != article.id %}
+              <li><a href="{{ recipe.url }}">{{ recipe.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="social-share">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'share_label' %}
+              <p class="share-label">{{ block.settings.text }}</p>
+          {% endcase %}
+        {% endfor %}
+        <div class="icons">
+          <!-- Replace with actual social links or use Shopify social-share snippet if available -->
+          <a href="#" aria-label="Share on Facebook">FB</a>
+          <a href="#" aria-label="Share on Instagram">IG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side: recipe content -->
+    <div class="recipe-right">
+      {{ article.content }}
+    </div>
+  </div>
+
+  <!-- Navigation links -->
+  <div class="recipe-navigation">
+    {% if article.previous %}
+      <a href="{{ article.previous.url }}" class="prev-recipe">← Previous</a>
+    {% endif %}
+    {% if article.next %}
+      <a href="{{ article.next.url }}" class="next-recipe">Next →</a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Recipe Article",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Recipe Title",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Main Title",
+          "default": "Recipe Title"
+        }
+      ]
+    },
+    {
+      "type": "description",
+      "name": "Short Description",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Short Description",
+          "default": "A brief description of this recipe..."
+        }
+      ]
+    },
+    {
+      "type": "share_label",
+      "name": "Share Label",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Share Text",
+          "default": "Share this post:"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Recipe Article",
+      "category": "Custom",
+      "blocks": [
+        { "type": "title" },
+        { "type": "description" },
+        { "type": "share_label" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+  
+  {% comment %} {% schema %}
+{
+    "name": "Recipe Article",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Recipe Article"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Recipe Article",
+        "category": "Custom"
+      }
+    ]
+  }
+  {% endschema %}  {% endcomment %}
