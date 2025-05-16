@@ -5,9 +5,9 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'title' %}
-          <h1 class="recipe-title">{{ block.settings.text }}</h1>
+            <h1 class="recipe-title">{{ article.title }}</h1>
         {% when 'description' %}
-          <p class="recipe-short-description">{{ block.settings.text }}</p>
+          <p class="recipe-short-description">{{ article.excerpt | truncate: 100 }}</p>
       {% endcase %}
     {% endfor %}
   </div>
@@ -23,7 +23,7 @@
         {% assign more_recipes = blogs['recipes-1'].articles | where: "id", article.id | limit: 2 %}
         <h3>More Recipes</h3>
         <ul>
-          {% for recipe in blogs['recipes-1'].articles limit: 2 %}
+          {% for recipe in blogs['recipes-1'].articles limit: 20 %}
             {% if recipe.id != article.id %}
               <li><a href="{{ recipe.url }}">{{ recipe.title }}</a></li>
             {% endif %}
@@ -48,18 +48,19 @@
   
     <div class="recipe-right">
       {{ article.content }}
+      <div class="recipe-navigation">
+        {% if article.previous %}
+          <a href="{{ article.previous.url }}" class="prev-recipe">← Previous</a>
+        {% endif %}
+        {% if article.next %}
+          <a href="{{ article.next.url }}" class="next-recipe">Next →</a>
+        {% endif %}
+      </div>
     </div>
   </div>
 
   
-  <div class="recipe-navigation">
-    {% if article.previous %}
-      <a href="{{ article.previous.url }}" class="prev-recipe">← Previous</a>
-    {% endif %}
-    {% if article.next %}
-      <a href="{{ article.next.url }}" class="next-recipe">Next →</a>
-    {% endif %}
-  </div>
+  
 </section>
 
 {% schema %}
@@ -79,7 +80,7 @@
         }
       ]
     },
-    {
+    {t
       "type": "description",
       "name": "Short Description",
       "settings": [

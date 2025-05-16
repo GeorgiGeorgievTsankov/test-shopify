@@ -17,7 +17,6 @@
   font-size: 56px;
   line-height: 130%;
   color: #e49aa3;
-
 }
 
 .recipe-article-header p {
@@ -31,7 +30,7 @@
   grid-template-columns: 1fr 1.5fr;
   gap: 64px;
   border: #090909 1px solid;
-  padding:0 32px 0 32px;
+  padding: 0 32px 0 32px;
 }
 
 .recipe-left {
@@ -47,24 +46,6 @@
   border-radius: 20px;
 }
 
-.recipe-suggestions {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.recipe-suggestion-item {
-  padding: 12px;
-  background-color: #f9f9f9;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.recipe-share {
-  margin-top: 24px;
-}
-
 .recipe-share p {
   margin-bottom: 18px;
   font-weight: bold;
@@ -74,25 +55,54 @@
   display: flex;
   gap: 12px;
 }
-.recipe-article-right {
-  border: #090909 1px solid;
+.recipe-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: #e49aa3 2px solid;
+  border-radius: 25px;
+  padding: 15px;
 }
 
+.recipe-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recipe-right ul li {
+  margin-bottom: 10px;
+}
+
+.related-recipes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------recipe navigation--------- */
 .recipe-navigation {
-  margin-top: 60px;
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
+  height: 40px;
+  background-color: chartreuse;
+  align-items: center;
+  border-top: 1px solid #0a0a0a;
 }
 
 .recipe-navigation a {
-  text-decoration: none;
   color: #e49aa3;
-  transition: color 0.2s ease;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
 }
 
-.recipe-navigation a:hover {
-  color: #c57a88;
+.prev-recipe {
+  justify-self: flex-start;
+}
+
+.next-recipe {
+  justify-self: flex-end;
 }
 
 @media (max-width: 768px) {
@@ -104,5 +114,31 @@
     flex-direction: column;
     gap: 12px;
     align-items: flex-start;
+  }
+
+  .recipe-main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    /* border: #090909 1px solid;
+    padding:0 32px 0 32px; */
+  }
+
+  .recipe-left {
+    max-width: 352px;
+    display: flex;
+    flex-direction: column;
+    border: #090909 1px solid;
+  }
+
+  .recipe-left img {
+    max-width: 352px;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .recipe-main-content {
+    border: #090909 1px solid;
+    padding: 0 15px;
   }
 }
