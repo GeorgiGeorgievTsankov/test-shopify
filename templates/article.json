@@ -16,6 +16,27 @@
     },
     "recipe_article_iXdQ6p": {
       "type": "recipe-article",
+      "blocks": {
+        "title_BP9yde": {
+          "type": "title",
+          "settings": {}
+        },
+        "description_Ctmc3N": {
+          "type": "description",
+          "settings": {}
+        },
+        "share_label_FgLKLK": {
+          "type": "share_label",
+          "settings": {
+            "text": "Share this post"
+          }
+        }
+      },
+      "block_order": [
+        "title_BP9yde",
+        "description_Ctmc3N",
+        "share_label_FgLKLK"
+      ],
       "name": "Recipe Article",
       "settings": {}
     }
