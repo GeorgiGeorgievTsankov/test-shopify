@@ -15,7 +15,7 @@
 }
 
 .recipe-article-header h1 {
-  font-size: 56px;
+  font-size: 46px;
   line-height: 130%;
   color: #e49aa3;
 }
@@ -92,10 +92,10 @@
 }
 
 .recipe-navigation a {
-  color: #e49aa3;
+  color: black;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .prev-recipe {
@@ -120,9 +120,8 @@
   }
 
   .recipe-navigation {
-    flex-direction: column;
     gap: 12px;
-    align-items: flex-start;
+
   }
 
   .recipe-main-content {
@@ -145,8 +144,12 @@
   }
 
   .recipe-main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+    text-align: center;
     border: #090909 1px solid;
     padding: 0 15px;
   }
-
 }

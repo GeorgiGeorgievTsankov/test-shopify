@@ -5,9 +5,9 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'title' %}
-            <h1 class="recipe-title">{{ article.title }}</h1>
+            <h1 class="recipe-title">{{ block.settings.text | default: article.title }}</h1>
         {% when 'description' %}
-          <p class="recipe-short-description">{{ article.excerpt | truncate: 100 }}</p>
+          <p class="recipe-short-description">{{ block.settings.text | default: article.excerpt | truncate: 100 }}</p>
       {% endcase %}
     {% endfor %}
   </div>
@@ -49,14 +49,20 @@
     <div class="recipe-right">
       {{ article.content }}
       <div class="recipe-navigation">
-        {% if article.previous %}
-          <a href="{{ article.previous.url }}" class="prev-recipe">← Previous</a>
-        {% endif %}
-        {% if article.next %}
-          <a href="{{ article.next.url }}" class="next-recipe">Next →</a>
-        {% endif %}
+          <div>
+            {% if blog.previous_article %}
+              <a href="{{ blog.previous_article.url }}">« Previous recipe</a>
+            {% endif %}
+          </div>
+          
+          <div>
+            {% if blog.next_article %}
+              <a href="{{ blog.next_article.url }}">Next recipe »</a>
+            {% endif %}
+          </div>
       </div>
     </div>
+
   </div>
 
   
@@ -71,26 +77,10 @@
     {
       "type": "title",
       "name": "Recipe Title",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Main Title",
-          "default": "Recipe Title"
-        }
-      ]
     },
     {
       "type": "description",
       "name": "Short Description",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Short Description",
-          "default": "A brief description of this recipe..."
-        }
-      ]
     },
     {
       "type": "share_label",
