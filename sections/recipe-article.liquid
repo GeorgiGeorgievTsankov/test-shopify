@@ -7,7 +7,7 @@
         {% when 'title' %}
             <h1 class="recipe-title">{{ block.settings.text | default: article.title }}</h1>
         {% when 'description' %}
-          <p class="recipe-short-description">{{ block.settings.text | default: article.excerpt | truncate: 100 }}</p>
+          <p class="recipe-short-description">{{ block.settings.text | default: article.excerpt | truncate: 120 }}</p>
       {% endcase %}
     {% endfor %}
   </div>
@@ -19,18 +19,28 @@
       {% else %}
       {% endif %}
 
+
       <div class="related-recipes">
-        {% assign more_recipes = blogs['recipes-1'].articles | where: "id", article.id | limit: 2 %}
         <h3>More Recipes</h3>
-        <ul>
-          {% for recipe in blogs['recipes-1'].articles limit: 20 %}
-            {% if recipe.id != article.id %}
-              <li><a href="{{ recipe.url }}">{{ recipe.title }}</a></li>
+        <div class="recipe-card-list">
+          {% assign count = 0 %}
+          {% for recipe in blogs['recipes-1'].articles %}
+            {% if recipe.id != article.id and count < 2 %}
+              <div class="recipe-card">
+                {% if recipe.image %}
+                  <img class="recipe-card-image" src="{{ recipe.image | img_url: '200x200' }}" alt="{{ recipe.title }}"  width="200px" height="200px" />
+                {% endif %}
+                <div class="recipe-card-content">
+                  <h4>{{ recipe.title }}</h4>
+                  <a class="recipe-card-button" href="{{ recipe.url }}">Read more</a>
+                </div>
+              </div>
+              {% assign count = count | plus: 1 %}
             {% endif %}
           {% endfor %}
-        </ul>
+        </div>
       </div>
-
+      
 
       <div class="social-share">
         {% for block in section.blocks %}
@@ -39,13 +49,13 @@
               <p class="share-label">{{ block.settings.text }}</p>
           {% endcase %}
         {% endfor %}
-        <div class="icons">
+        <div class="recipe-icons">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ article.url | absolute_url }}" target="_blank" aria-label="Share on Facebook">
-                <img src="{{ 'facebook-icon.svg' | asset_url }}" alt="Facebook">
-              </a>
-              <a href="https://twitter.com/intent/tweet?url={{ article.url | absolute_url }}&text={{ article.title }}" target="_blank" aria-label="Share on Twitter">
-                <img src="{{ 'twitter-icon.svg' | asset_url }}" alt="Twitter">
-              </a>
+                <img src="{{ images['facebook.svg'] | image_url: width: 24 }}" alt="Facebook" width="24" height="24"> 
+            </a>
+            <a href="https://twitter.com/intent/tweet?url={{ article.url | absolute_url }}&text={{ article.title }}" target="_blank" aria-label="Share on Twitter">
+                <img src="{{ images['twitter.svg'] | image_url: width: 24 }}" alt="Twitter" width="24" height="24">
+            </a>
         </div>
       </div>
     </div>
@@ -53,6 +63,10 @@
   
     <div class="recipe-right">
         <div class="recipe-article-content-box">
+            {% comment %} <div class="recipe-short-description-excerpt">
+                <p>{{ block.settings.text | default: article.excerpt }}</p>
+            </div> {% endcomment %}
+            
             {{ article.content }}
         </div>
 
@@ -117,22 +131,3 @@
 }
 {% endschema %}
 
-
-  
-  {% comment %} {% schema %}
-{
-    "name": "Recipe Article",
-    "settings": [
-      {
-        "type": "header",
-        "content": "Recipe Article"
-      }
-    ],
-    "presets": [
-      {
-        "name": "Recipe Article",
-        "category": "Custom"
-      }
-    ]
-  }
-  {% endschema %}  {% endcomment %}
