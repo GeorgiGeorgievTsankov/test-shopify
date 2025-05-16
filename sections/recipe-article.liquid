@@ -1,8 +1,7 @@
 {{ 'recipe-article-section.css' | asset_url | stylesheet_tag }}
 
-<section class="recipe-detail-container">
-  <!-- Header section with title and short description -->
-  <div class="recipe-header">
+<section class="recipe-article-wrapper global-padding display-large">
+  <div class="recipe-article-header">
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'title' %}
@@ -13,12 +12,11 @@
     {% endfor %}
   </div>
 
-  <!-- Main content area -->
   <div class="recipe-main-content">
-    <!-- Left side: image, extra recipes, social share -->
     <div class="recipe-left">
       {% if article.image %}
-        <img class="main-recipe-image" src="{{ article.image | img_url: '800x' }}" alt="{{ article.title }}">
+        <img class="main-recipe-image" src="{{ article.image | img_url: '800x' }}" alt="{{ article.title }}" width="400px" height="400px" />
+      {% else %}
       {% endif %}
 
       <div class="related-recipes">
@@ -41,20 +39,19 @@
           {% endcase %}
         {% endfor %}
         <div class="icons">
-          <!-- Replace with actual social links or use Shopify social-share snippet if available -->
           <a href="#" aria-label="Share on Facebook">FB</a>
           <a href="#" aria-label="Share on Instagram">IG</a>
         </div>
       </div>
     </div>
 
-    <!-- Right side: recipe content -->
+  
     <div class="recipe-right">
       {{ article.content }}
     </div>
   </div>
 
-  <!-- Navigation links -->
+  
   <div class="recipe-navigation">
     {% if article.previous %}
       <a href="{{ article.previous.url }}" class="prev-recipe">← Previous</a>
