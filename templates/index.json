@@ -74,11 +74,161 @@
       ],
       "name": "Our-Approach",
       "settings": {}
+    },
+    "seupport_adviced_V4UKJV": {
+      "type": "seupport-adviced",
+      "blocks": {
+        "text_7Wgify": {
+          "type": "text",
+          "settings": {
+            "heading": "Support & Non-Judgmental Advice",
+            "text": "<p>Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze.</p><p> We help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_7Wgify"
+      ],
+      "name": "Support & Advice",
+      "settings": {}
+    },
+    "our_values_xWBYpf": {
+      "type": "our-values",
+      "blocks": {
+        "text_htBdjj": {
+          "type": "text",
+          "settings": {
+            "heading": "Our Values",
+            "text": "<p>Feeding your baby is a deeply personal journey, and we encourage parents to make choices that align with their family’s lifestyle. Whether you follow BLW (baby-led weaning) or traditional weaning, we support a positive, intuitive approach to food.Our mission is to empower parents and build confident eaters, ensuring that every step of the feeding journey feels supported, informed, and enjoyable.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_htBdjj"
+      ],
+      "name": "Our-Values",
+      "settings": {}
+    },
+    "welcome_to_starting_BKHHx7": {
+      "type": "welcome-to-starting",
+      "blocks": {
+        "heading_JDiJyL": {
+          "type": "heading",
+          "settings": {
+            "text": "Welcome to Starting Solids Australia",
+            "heading_color": "#E49AA3"
+          }
+        },
+        "paragraph_kGaexg": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>>Do you want to make starting solids easier every step of the way? Our team of paediatric health professionals have created the perfect products and resources to make Starting Solids a breeze.</p"
+          }
+        },
+        "paragraph_2_9PHRJ9": {
+          "type": "paragraph_2",
+          "settings": {
+            "text_2": "We help you cut through the noise and misinformation that circulates around Starting Solids and make it simple for you to learn how to prepare quick, easy nutritious meals and raise happy, healthy intuitive eaters free from the baby and toddler feeding drama!"
+          }
+        },
+        "button_kVC33Q": {
+          "type": "button",
+          "settings": {
+            "label_button": "Learn More",
+            "secondary_button_link": "",
+            "button_color": "#39A487",
+            "text_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JDiJyL",
+        "paragraph_kGaexg",
+        "paragraph_2_9PHRJ9",
+        "button_kVC33Q"
+      ],
+      "name": "Welcome to Starting Solids Australia",
+      "settings": {
+        "welcome_image": "shopify://shop_images/welcome-to-starting-solids.png"
+      }
+    },
+    "solids_library_qENnic": {
+      "type": "solids-library",
+      "blocks": {
+        "heading_wgnhxW": {
+          "type": "heading",
+          "settings": {
+            "text": "Start Your Solids Library",
+            "heading_color": "#E49AA3"
+          }
+        },
+        "paragraph_YWRfX4": {
+          "type": "paragraph",
+          "settings": {
+            "text": "Browse our library of information and recipes to get you started on solids. Unlock extra exclusive content including crash course and members forum with our starting solids membership!"
+          }
+        },
+        "button_xwzAfA": {
+          "type": "button",
+          "settings": {
+            "label_button": "Explore Now",
+            "secondary_button_link": "",
+            "button_color": "#39A487",
+            "text_color": "#FFFFFF"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wgnhxW",
+        "paragraph_YWRfX4",
+        "button_xwzAfA"
+      ],
+      "name": "Solids Library",
+      "settings": {}
+    },
+    "starting_shop_yjR7eq": {
+      "type": "starting-shop",
+      "blocks": {
+        "heading_DzFBxt": {
+          "type": "heading",
+          "settings": {
+            "text": "Starting Solids Shop",
+            "heading_color": "#E49AA3"
+          }
+        },
+        "paragraph_4QPkVR": {
+          "type": "paragraph",
+          "settings": {
+            "description": "Our exclusive range of products have been purposefully designed to support your little one's learning and development. Shop the best quality and best function suction ware on the market right here!"
+          }
+        },
+        "button_mF3zd4": {
+          "type": "button",
+          "settings": {
+            "label_button": "Shop Now",
+            "button_color": "#39A487",
+            "text_color": "#FFFFFF",
+            "secondary_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_DzFBxt",
+        "paragraph_4QPkVR",
+        "button_mF3zd4"
+      ],
+      "name": "Starting Shop",
+      "settings": {}
     }
   },
   "order": [
     "hero_starting_solids_j9zxbW",
     "recipes_dhpdfC",
-    "our_approach_TMATiN"
+    "our_approach_TMATiN",
+    "seupport_adviced_V4UKJV",
+    "our_values_xWBYpf",
+    "welcome_to_starting_BKHHx7",
+    "solids_library_qENnic",
+    "starting_shop_yjR7eq"
   ]
 }
